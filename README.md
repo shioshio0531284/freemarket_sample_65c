@@ -89,6 +89,16 @@
 - belongs_to :item_id
 
 
+## item_imagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|url|text|null: false|
+|item_id|references|null:false,foreign_key:true|
+
+### Associatioin
+belongs_to :item
+
+
 ## categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -107,14 +117,6 @@
 - has_many :items
 - has_many :set_brands
 
-## item_imagesテーブル
-|Column|Type|Options|
-|------|----|-------|
-|url|text|null: false|
-|item_id|references|null:false,foreign_key:true|
-
-### Associatioin
-belongs_to :item
 
 ## set_brandsテーブル
 |Column|Type|Options|
