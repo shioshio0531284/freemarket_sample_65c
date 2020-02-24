@@ -44,26 +44,24 @@
 ## itemsテーブル (商品)
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, unique: true|
+|name|string|null: false|
+|image|string|null: false|
 |description|text|null: false| #description:商品説明
 |status|integer|null: false| #status:商品状態
-|postage|string|null: false|  #postage:送料
+|postage|string|null: false|  #postage:配送料の負担
 |delivery_way|string|null: false| #delivery_way:配送方法
 |delivery_area|string|null: false| #delivery_area:発送元地域
-|delivery_date|string|null :false| #delivery_date:発送日の目安
+|delivery_date|string|null :false| #delivery_date:発送までの目安
 |price|integer|null: false|
-|buyer_id|integer|class_name: "User"|
-|seller_id|integer|class_name: "User"|
 |category_id|references|null: false,foreign_key: true|
-|size|text|foreign_key: true|
-|brand_id|references|foreign_key: true|
+|size|text||
+|brand|text||
 
 ### Associatioin
 - belongs_to :user
 - has_many :item_comments, dependent: :destroy
 - belongs_to :category
 - belongs_to :brand
-- has_many :item_images
 
 
 ## credit_cardsテーブル 
@@ -89,49 +87,32 @@
 - belongs_to :item_id
 
 
-## item_imagesテーブル
-|Column|Type|Options|
-|------|----|-------|
-|url|text|null: false|
-|item_id|references|null:false,foreign_key:true|
-
-### Associatioin
-belongs_to :item
-
-
 ## categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |genre|string|null: false, unique: true|
-|ancestry|string||
 
 ### Associatioin
 - has_many :items
-
-## brandsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-
-### Associatioin
-- has_many :items
-- has_many :set_brands
-
-
-## set_brandsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|brand_id|references|foreign_key: true|
-|brand_category_id|references|foreign_key: true|
-
-### Association
-- belongs_to :brand
-- belongs_to :brand_category
+- has_many :brands, through:brand_categories
 
 ## brand_categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|brand_id|integer|null: false, foreign_key: true|
+|category_id|integer|null: false, foreign_key: true|
+
+- belongs_to :categories
+- belongs_to :brands
 
 ### Associatioin
-- has_many :set_brands
+
+
+## brandsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|genre|string|null: false|
+
+### Associatioin
+- has_many :categories, through:brand_categories
+
