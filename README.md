@@ -20,6 +20,9 @@
 - has_many :item_comments, dependent: :destroy
 - has_one :users_addresses
 - has_one :credit_cards
+- has_many :buyed_items, foreign_key: "buyer_id", class_name: "Item"
+- has_many :saling_items, -> { where("buyer_id is NULL") }, foreign_key: "saler_id", class_name: "Item"
+- has_many :sold_items, -> { where("buyer_id is not NULL") }, foreign_key: "saler_id", class_name: "Item"
 
 
 ## users_addressテーブル
@@ -56,13 +59,17 @@
 |category_id|references|null: false,foreign_key: true|
 |size|text||
 |brand|text||
+|saler_id|integer|class_name: "User"|
+|saler_id|integer|class_name: "User"|
+
 
 ### Associatioin
 - belongs_to :user
 - has_many :item_comments, dependent: :destroy
 - belongs_to :category
 - belongs_to :brand
-
+- belongs_to :buyer, class_name: 'User', foreign_key: 'buyer_id'
+- belongs_to :seller, class_name: 'User', foreign_key: 'seller_id'
 
 ## credit_cardsテーブル 
 |Column|Type|Options|
