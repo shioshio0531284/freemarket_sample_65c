@@ -1,3 +1,8 @@
+# Basic認証
+user : admin
+pass : team65c
+
+
 # DB設計
 
 ## usersテーブル 
