@@ -1,0 +1,100 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+a { 
+  text-decoration: none
+}
+
+.wipper {
+  width: 100％;
+  height: 100％;
+  background-color: #eeeeee;
+  text-align: center;
+
+  .signup-header {
+    height: 128px;
+    display: inline-block;
+
+    
+    &__logo {
+     margin-top: 40px;
+     display: inline-block;
+    }
+  }
+
+  .signup-main {
+    display: block;
+
+    .signup-content {
+      background-color: #fff;
+      width: 700px;
+      margin: 0 auto;
+      &__title {
+       font-size: 22px;
+       padding: 32px;
+       font-weight: bold;
+      }
+      &__form {
+        padding: 40px 40px 64px;
+      }
+      &__btns {
+        max-width: 343px;
+        margin: 0 auto;
+      }
+      &__btn {
+        margin: 0 auto;
+        display: block;
+        cursor: pointer;
+          .default-btn {
+            display: block;
+            width: 100%;
+            line-height: 48px;
+            font-size: 14px;
+            border: 1px solid;
+            transition: all ease-out .3s;
+            border-radius: 4px;
+            }
+          
+          &--email {
+            background-color: #ea352d;
+            color: #fff;
+            position: relative;
+            &-icon {
+              color: #fff;
+              position: absolute;
+              top: 50%;
+              left: 16px;
+              font-size: 16px;
+              transform: translate(0, -50%);
+          }
+          }
+          .sns-btn{
+            position: relative;
+          }
+          &--facebook {
+            margin: 16px 0 0;
+            background-color: #385185;
+            color: #fff;
+            &-icon {
+              position: absolute;
+              top: 50%;
+              left: 16px;
+              font-size: 26px;
+            }
+          }
+          &--google {
+            margin: 16px 0 0;
+            background-color: #fff;
+            border: #979797 soild 1px;
+            color: #333;
+            &-icon {
+              position: absolute;
+              top: 50%;
+              left: 16px;
+            }
+          }
+        }
+    }
+  }
+}
+
