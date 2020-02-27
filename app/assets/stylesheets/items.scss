@@ -4,6 +4,25 @@
 .wipper {
   width: 100%;
   height: 100%;
+  html, body, div, span, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  abbr, address, cite, code,
+  del, dfn, em, img, ins, kbd, q, samp,
+  small, strong, sub, sup, var,
+  b, i,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, figcaption, figure,
+  footer, header, hgroup, menu, nav, section, summary,
+  time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  vertical-align:baseline;
+  background:transparent;
+  }
 
   .main{
 
@@ -52,16 +71,20 @@
         }
       }
       .lists{
-        
+        display: flex;
+        max-width: 1020px;
+        margin: 0 auto;
         .list{
           height: 300px;
-          width: 400px;
+          width: 300px;
+          margin: 16px 5% 0 5px;
           &_content{
             position: relative;
             &_image {
               height: 300px;
               width: 300px;
             }
+
             .number{
               position: absolute;
               top: 0;
@@ -72,15 +95,29 @@
               padding: 10px 20px;
               margin: 0 5px 0 0;
             }
+
           }
           .subtitle{
             font-weight: bold;
             font-size: 24px;
-            margin: 0 0 0 2px;
+            margin: 15px 0 0 2px;
             line-height: 50px;
             text-align: center;
-            .span {
+            span {
               color: #3CCACE;
+            }
+            &_text {
+              margin-top: 10px;
+              font-size: 18px;
+              text-align: left;
+              line-height: 1.5;
+            }
+            &_text-last{
+              margin-top: 10px;
+              font-size: 18px;
+              text-align: left;
+              line-height: 1.5;
+              text-align: center;
             }
           }
         }
