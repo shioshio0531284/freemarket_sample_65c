@@ -14,5 +14,65 @@
     display: flex;
     justify-content: space-between;
   }
-
+  &--right{
+    &__content{
+      background: #FFFFFF;
+      width: 700px;
+      margin-bottom: 50px;
+    }
+    &--top{
+      height: 200px;
+      position: relative;
+      text-align: center;
+    }
+  }
+  &__user-icon{
+    position: relative;
+    top: 45px;
+  }
+  &__user-name{
+    position: relative;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  &__user-status{
+  }
+  &__user-status span{
+    font-weight: bold;
+  }
+  &__tab-box{
+    &__tab{
+      display: flex;
+      height: 80px;
+      color: black;
+      font-weight: bold;
+      &--left{
+        width: 50%;
+        text-align: center;
+        line-height: 70px;
+      }
+      &--right{
+        width: 50%;
+        text-align: center;
+        line-height: 70px;
+      }
+    }
+    &__bottom{
+      padding: 20px;
+      text-align: center;
+    }
+  }
+  &__purchased-product{
+    margin: 50px 0 0;
+    &__title{
+      padding: 0 20px;
+      box-sizing: border-box;
+      line-height: 70px;
+      font-weight: bold;
+    }
+    &_tab-box_content_text{
+      padding: 60px 0 60px;
+      text-align: center;
+    }
+  }
 }
