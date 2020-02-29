@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
   root 'items#index'
-  resources :users, only: [:new]
+
+  resources :users, only: [:new, :index] do
+    collection do
+      get 'mypage'
+    end
+  end
 end

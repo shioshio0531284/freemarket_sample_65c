@@ -1,0 +1,18 @@
+.mypage__header{
+  height: 150px;
+  background: white;
+}
+
+.mypage{
+  &__whole{
+    background: #F5F5F5;
+  }
+  &__content{
+    width: 70%;
+    padding: 40px 0;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
