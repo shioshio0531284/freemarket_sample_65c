@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :index] do
     collection do
       get 'mypage'
+      get '_logout'
     end
   end
 end

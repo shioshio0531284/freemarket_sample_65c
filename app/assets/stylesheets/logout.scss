@@ -1,0 +1,23 @@
+.logout{
+  width: 1000px;
+  margin: 50px auto 0;
+  padding: 50px 0;
+  &__sidebar{
+    float: left;
+  }
+  .form-logout{
+    width: 500px;
+    height: 4vw;
+    background-color:#FFFFFF;
+    float: right;
+    padding: 70px;
+    &__middle{
+      margin: 0 auto;
+      width: 55%;
+      height: 89%;
+      &__btn{
+        @include btn;
+      }
+    }
+  }
+}

@@ -51,5 +51,6 @@
         %li.side-bar--top__menu 本人情報
       .side-bar-box
         %li.side-bar--top__menu 電話番後の確認
-      .side-bar-box
-        %li.side-bar--top__menu ログアウト
+      = link_to _logout_users_path ,class: 'side-bar-link' do
+        .side-bar-box
+          %li.side-bar--top__menu ログアウト
