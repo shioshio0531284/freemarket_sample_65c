@@ -1,5 +1,4 @@
 # フリマクローンサイト
-http://freemarket-sample-65c.work/
 
 # Basic認証
 user : admin
