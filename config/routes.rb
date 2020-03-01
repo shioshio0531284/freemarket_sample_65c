@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     collection do
       get 'mypage'
       get '_logout'
+      get '_side-bar'
     end
   end
 end
