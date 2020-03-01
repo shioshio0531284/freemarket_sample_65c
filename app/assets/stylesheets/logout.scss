@@ -1,21 +1,30 @@
+.logout__header{
+  height: 150px;
+  background: white;
+}
+
 .logout{
-  width: 1000px;
-  margin: 50px auto 0;
-  padding: 50px 0;
-  &__sidebar{
-    float: left;
-  }
-  .form-logout{
-    width: 500px;
-    height: 4vw;
-    float: right;
-    padding: 70px;
-    &__middle{
-      margin: 0 auto;
-      width: 55%;
-      height: 89%;
-      &__btn{
-        @include btn;
+  background: #F5F5F5;
+  .logout__whole{
+    width: 70%;
+    margin: auto ;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    &__sidebar{
+    }
+    .form-logout{
+      width: 500px;
+      height: 4vw;
+      padding: 70px;
+      background-color: #FFFFFF;
+      &__middle{
+        margin: 0 auto;
+        width: 55%;
+        height: 90%;
+        &__btn{
+          @include btn;
+        }
       }
     }
   }

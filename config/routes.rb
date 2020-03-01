@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       get 'mypage'
       get '_logout'
       get '_side-bar'
+      get '_card_registration'
     end
   end
 end

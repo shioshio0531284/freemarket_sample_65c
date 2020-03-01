@@ -1,8 +1,8 @@
 .side-bar
   .side-bar--upper
-      
-    .side-bar-box
-      %li.side-bar--top__menu マイページ
+    = link_to mypage_users_path ,class: 'side-bar-link' do
+      .side-bar-box
+        %li.side-bar--top__menu マイページ
     .side-bar-box
       %li.side-bar--top__menu お知らせ
     .side-bar-box
@@ -43,8 +43,9 @@
         %li.side-bar--top__menu プロフィール
       .side-bar-box
         %li.side-bar--top__menu 発送元・お届け先住所変更
-      .side-bar-box
-        %li.side-bar--top__menu 支払い方法
+      = link_to _card_registration_users_path ,class: 'side-bar-link' do
+        .side-bar-box
+          %li.side-bar--top__menu 支払い方法
       .side-bar-box
         %li.side-bar--top__menu メール/パスワード
       .side-bar-box

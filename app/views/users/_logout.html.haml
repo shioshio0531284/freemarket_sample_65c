@@ -1,11 +1,15 @@
 .header
 
+.logout__header
+  FURIMA  >  ログアウト
+
 .logout
-  .logout__sidebar
-    = render 'users/side-bar'
-  .form-logout
-    .form-logout__middle
-      %button.form-logout__middle__btn
-        = link_to "ログアウト"
+  .logout__whole
+    .logout__sidebar
+      = render 'users/side-bar'
+    .form-logout
+      .form-logout__middle
+        %button.form-logout__middle__btn
+          = link_to "ログアウト"
 
 .footer

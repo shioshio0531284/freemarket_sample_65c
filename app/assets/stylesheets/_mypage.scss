@@ -1,3 +1,6 @@
+.header{
+}
+
 .mypage__header{
   height: 150px;
   background: white;
@@ -24,6 +27,7 @@
       height: 200px;
       position: relative;
       text-align: center;
+      background: url(asset_path("user_icon.png"));
     }
   }
   &__user-icon{
@@ -73,6 +77,32 @@
     &_tab-box_content_text{
       padding: 60px 0 60px;
       text-align: center;
+    }
+  }
+}
+
+.user-icon{
+  width:60px;
+  height:60px;
+  border-radius: 50%;
+}
+
+.info-box{
+  display:flex;
+  min-height: 80px;
+  padding: 16px;
+  color: black;
+  border-bottom: solid #F5F5F5 1px;
+  &__right{
+    margin-left:20px;
+    .lower{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      color: #888888;
+      .howmany{
+        padding-right: 10px;
+      }
     }
   }
 }
