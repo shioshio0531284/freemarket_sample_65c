@@ -14,9 +14,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @user = User.new(sign_up_params)
     unless @user.valid?
       flash.now[:alert] = @user.errors.full_messages
-      render :new and return
+      render :new && return
     end
-    session["devise.regist_data"] = {user: @user.attributes}
+    session["devise.regist_data"] = { user: @user.attributes }
     session["devise.regist_data"][:user]["password"] = params[:user][:password]
     @users_address = @user.build_users_address
     render :new_users_address
@@ -27,7 +27,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @users_address = UsersAddress.new(users_address_params)
     unless @users_address.valid?
       flash.now[:alert] = @users_address.errors.full_messages
-      render :new_users_address and return
+      render :new_users_address && return
     end
     @user.build_users_address(@users_address.attributes)
     @user.save
