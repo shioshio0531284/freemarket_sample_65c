@@ -24,6 +24,9 @@
         height: 90%;
         &__btn{
           @include btn;
+          a{
+            color: white;
+          }
         }
       }
     }

@@ -12,7 +12,7 @@
         .mypage--right__content
           .mypage--right--top
             .mypage__user-icon
-            
+              =image_tag 'user_icon.png', class: 'user-icon'
             .mypage__user-name
               仮ユーザー
             .mypage__user-status
@@ -27,10 +27,9 @@
               .mypage__tab-box__tab--right
                 やることリスト
             .mypage__tab-box__info
-
               .info-box
                 .info-icon
-
+                  = image_tag 'mypage_logo.png', class: 'furima_icon'
                 .info-box__right
                   .info-message
                     CM放映中！
@@ -50,6 +49,7 @@
                   過去の取引
               .mypage__purchased-product__tab-box__content
                 .mypage__purchased-product__tab-box__content_text
+                  = image_tag 'mypage_product.png', class: 'mypage_product'
 
 .footer__mypage
 

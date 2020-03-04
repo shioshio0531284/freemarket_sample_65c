@@ -24,10 +24,11 @@
         height: 50px;
         width: 700px;
         font-size: 25px;
+        border-bottom: 1px solid #eee;
       }
       &--middle{
         width: 700px;
-        height: 300px;
+        height: 25px;
         padding: 50px;
         text-align: center;
         &--card{
@@ -39,8 +40,11 @@
           padding: 24px 0px;
           font-size: 14px;
           border-bottom: 1px solid #eee;
+          text-align: center;
           a {
             text-decoration:none;
+            background-color: #3CCACE;
+            color: white;
           }
         }
       }
@@ -50,7 +54,7 @@
         margin: 40px  0px 0px;
         &--last{
           font-size: 14px;
-          text-align: center;
+          text-align: right;
         }
       }
     }
