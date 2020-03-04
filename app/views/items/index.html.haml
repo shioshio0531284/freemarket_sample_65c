@@ -1,3 +1,10 @@
+
+.toppage
+  - if user_signed_in?
+    = link_to "ログアウト", destroy_user_session_path, method: :delete
+  - else
+    = link_to "ログイン", new_user_session_path, method: :get
+
 .wrapper
   .main
     .main--vanner
@@ -189,4 +196,5 @@
           = image_tag src="material/logo/App_Store_Badge.png", class: "content__btn__app"
         = link_to '#', class: 'content__btn__link' do
           = image_tag src="material/logo/google_play.png", class: "content__btn__google"
+
 
