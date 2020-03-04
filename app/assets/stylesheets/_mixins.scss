@@ -7,3 +7,12 @@
   border: 1px solid #3CCACE;
   background-color: #3CCACE;
 }
+
+@mixin card-btn {
+  line-height: 40px;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  border: 1px solid #3CCACE;
+  background-color: #3CCACE;
+}
