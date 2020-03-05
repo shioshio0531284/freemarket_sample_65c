@@ -1,11 +1,20 @@
 
-.toppage
-  - if user_signed_in?
-    = link_to "ログアウト", destroy_user_session_path, method: :delete
-  - else
-    = link_to "ログイン", new_user_session_path, method: :get
-
 .wrapper
+  .header
+    .header__content
+      .main
+        = image_tag src='material/logo/logo.png', class: 'main__logo'
+        .main__search
+      .lists
+        .list--left
+          %ul
+            %li カテゴリー
+            %li ブランド
+        .list--right
+          - if user_signed_in?
+            = link_to "ログアウト", destroy_user_session_path, method: :delete
+          - else
+            = link_to "ログイン", new_user_session_path, method: :get
   .main
     .main--vanner
       .content
