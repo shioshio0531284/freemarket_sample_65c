@@ -9,4 +9,6 @@ Rails.application.routes.draw do
       get '_card_registration'
     end
   end
+
+  
 end
