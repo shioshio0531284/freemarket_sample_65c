@@ -3,16 +3,16 @@ class CreateItems < ActiveRecord::Migration[5.2]
     create_table :items do |t|
       t.string :name ,  null:false
       t.string :image,  null:false
-      t.description :text, null:false
-      t.status :text, null:false
-      t.postage :string, null:false
-      t.delivery_way :string, null:false
-      t.delivery_area :string, null:false
-      t.delivery_date :string, null:false
-      t.price :integer, null:false
-      t.category :text
-      t.size :text
-      t.brand :text
+      t.text :description, null:false
+      t.text :status, null:false
+      t.string :postage, null:false
+      t.string :delivery_way, null:false
+      t.string :delivery_area, null:false
+      t.string :delivery_date, null:false
+      t.integer :price, null:false
+      t.text :category
+      t.text :size 
+      t.text :brand
       t.timestamps
     end
   end
