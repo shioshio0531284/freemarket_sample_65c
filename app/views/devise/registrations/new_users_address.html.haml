@@ -1,13 +1,4 @@
 %h2 住所情報登録
-
-.error_message
-  -if model.errors.any? 
-      .alert alert-warning
-          %ul 
-            -model.errors.full_messages.each do |message|
-            %li
-              =message 
-
 = form_for @users_address do |f|
   = render "devise/shared/error_messages", resource: @users_address
 
