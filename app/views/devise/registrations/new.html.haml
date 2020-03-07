@@ -1,4 +1,13 @@
 %h2 Sign up
+
+.error_message
+  -if model.errors.any? 
+      .alert alert-warning
+          %ul 
+            -model.errors.full_messages.each do |message|
+            %li
+              =message 
+
 = form_for(@user, url: user_registration_path) do |f|
   = render "devise/shared/error_messages", resource: @user
 
