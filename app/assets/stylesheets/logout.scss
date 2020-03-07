@@ -1,11 +1,11 @@
-.logout__header{
+.page__header{
   height: 150px;
   background: white;
 }
 
 .logout{
   background: #F5F5F5;
-  .logout__whole{
+  &__whole{
     width: 70%;
     margin: auto ;
     padding: 40px 0;

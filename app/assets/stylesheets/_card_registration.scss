@@ -1,11 +1,11 @@
-.card_registration__header{
+.page__header{
   height: 150px;
   background: white;
 }
 
 .card_registration{
   background: #F5F5F5;
-  .card_registration__whole{
+  &__whole{
     width: 70%;
     margin: auto;
     padding: 40px 0;
