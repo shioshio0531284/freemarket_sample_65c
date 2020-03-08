@@ -1,0 +1,67 @@
+.page__header{
+  height: 150px;
+  background: white;
+}
+
+.card_registration{
+  background: #F5F5F5;
+  &__whole{
+    width: 70%;
+    margin: auto;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    .form-card_registration{
+      width: 750px;
+      margin: 0 auto;
+      padding-bottom: 20px;
+      background-color: #FFFFFF;
+      &--top{
+        text-align: center;
+        padding: 10px 25px;
+        height: 50px;
+        width: 700px;
+        font-size: 25px;
+        border-bottom: 1px solid #eee;
+      }
+      &--middle{
+        width: 700px;
+        height: 50px;
+        padding: 50px;
+        text-align: center;
+        &--card{
+          padding: 0px;
+          margin: 0px;
+          font-size: 25px;
+        }
+        &--add{
+          padding: 24px 0px;
+          font-size: 14px;
+          border-bottom: 1px solid #eee;
+          text-align: center;
+        }
+        &__btn{
+          line-height: 40px;
+          font-size: 20px;
+          text-align: center;
+          color: #fff;
+          border: 1px solid #3CCACE;
+          background-color: #3CCACE;
+          a{
+            text-decoration: none;
+            color: white;
+          }
+        }
+      }
+      &--bottom{
+        width: 700px;
+        height: 20px;
+        margin: 40px  0px 0px;
+        &--last{
+          font-size: 14px;
+          text-align: right;
+        }
+      }
+    }
+  }
+}

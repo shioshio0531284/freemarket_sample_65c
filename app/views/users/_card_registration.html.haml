@@ -1,0 +1,23 @@
+.header
+
+.page__header
+  FURIMA  >  支払い方法
+
+.card_registration
+  .card_registration__whole
+    .card_registration__sidebar
+      = render "users/side-bar"
+    .form-card_registration
+      .form-card_registration--top
+        支払い方法
+      .form-card_registration--middle
+        .form-card_registration--middle--card
+          クレジットカード一覧
+        .form-card_registration--middle--add
+          %button.form-card_registration--middle__btn
+            = link_to "クレジットカードを追加する"
+      .form-card_registration--bottom
+        .form-card_registration--bottom--last
+          支払い方法について
+
+.footer
