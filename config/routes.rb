@@ -16,4 +16,7 @@ Rails.application.routes.draw do
       get '_card_registration'
     end
   end
+
+  resources :signups, only: [:index] do
+  end
 end

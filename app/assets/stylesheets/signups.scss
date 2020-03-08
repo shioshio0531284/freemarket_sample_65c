@@ -1,0 +1,126 @@
+a { 
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100vw;
+}
+
+.wipper {
+  background-color: #eeeeee;
+  text-align: center;
+
+  .signup-header {
+    height: 128px;
+    width: 100%;
+    display: inline-block;
+    
+    &__logo {
+     margin: 40px 0 0;
+     display: inline-block;
+    }
+  }
+
+  .signup-main {
+    display: block;
+    font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+
+    .signup-content {
+      background-color: #fff;
+      width: 700px;
+      margin: 0 auto;
+      &__title {
+       font-size: 22px;
+       padding: 32px;
+       border-bottom: 1px solid #f5f5f5;
+        h2 {
+          font-weight: bold;
+        }
+      }
+      &__form {
+        padding: 40px 40px 64px;
+      }
+      &__btns {
+        max-width: 343px;
+        margin: 0 auto;
+      }
+      &__btn {
+        margin: 0 auto;
+        display: block;
+        cursor: pointer;
+          .default-btn {
+            display: block;
+            width: 100%;
+            line-height: 48px;
+            font-size: 14px;
+            border: 1px solid;
+            transition: all ease-out .3s;
+            border-radius: 4px;
+            }
+          
+          &--email {
+            background-color: #ea352d;
+            color: #fff;
+            position: relative;
+            &-icon {
+              float: left;
+              color: #fff;
+              position: absolute;
+              top: 15px;
+              left: 16px;
+              font-size: 20px;
+          }
+          }
+          &--facebook {
+            margin: 16px 0 0;
+            background-color: #385185;
+            color: #fff;
+            position: relative;
+            &-icon {
+              float: left;
+              position: absolute;
+              top: 10px;
+              left: 15px;
+              font-size: 26px;
+            }
+          }
+          &--google {
+            margin: 16px 0 0;
+            background-color: #fff;
+            border: #979797 soild 1px;
+            color: #333;
+            display: inline-block;
+            position: relative;
+            &-icon {
+              float: left;
+              position: absolute;
+              font-size: 20px;
+              left: 15px;
+              top: 15px;
+            }
+          }
+        }
+    }
+  }
+  .signup-footer {
+    width: 456px;
+    height: 220px;
+    margin: 0 auto;
+    padding: 40px 0;
+    text-align: center;
+    .footer-links {
+      display: flex;
+      justify-content: space-around;
+      a {
+        font-size: 12px;
+        color:black;
+      }
+    }
+    &__logo {
+      margin: 40px auto 0;
+    }
+    .inc {
+      font-size: 13px;
+    }
+  }
+}
