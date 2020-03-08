@@ -1,0 +1,124 @@
+.new-user-main {
+  background-color: #f5f5f5;
+  &__box {
+    width: 700px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding-bottom: 30px;
+    &__title {
+      height: 100px;
+      font-size: 22px;
+      line-height: 100px;
+      border-bottom: 1px solid rgb(221, 221, 221);
+      font-weight: bold;
+      text-align: center;
+    }
+    &__contents {
+      &__list {
+        padding: 40px 40px 64px; 
+        max-width: 343px;
+        margin: 0 auto;
+        .form__new-user__group {
+          box-sizing: border-box;
+          &-space {
+            margin: 24px 0 0;
+          }
+            &-text {
+              display: inline-block;
+              font-size: 14px;
+              font-weight: bold;
+              vertical-align: top;
+              text-align: left;
+            }
+            .single-text {
+              font-size: 14px;
+              margin: 8px 0 0;
+            }
+          &--alert {
+            background-color: #ea352d;
+            margin: 0 0 0 8px;
+            padding: 2px 4px;
+            border-radius: 2px;
+            color: #fff;
+            font-size: 12px;
+            vertical-align: top;
+          }
+          &-checkbox {
+            margin: 16px 0 0;
+            font-size: 14px;
+            position: relative;
+            .checkbox-btn {
+              position: absolute;
+              top: 50%;
+              left: 0;
+              width: 20px;
+              height: 20px;
+              z-index: 1;
+            }
+            .checkbox-defult {
+              position: absolute;
+              top: 50%;
+              left: 0;
+              z-index: 2;
+              cursor: pointer;
+              padding: 0 0 0 28px;
+            }
+          }
+          .def-input {
+            width: 100%;
+            margin: 8px 0 0;
+            height: 48px;
+            padding: 10px 16px 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            line-height: 1.5;
+            font-size: 16px;
+            box-sizing: border-box;
+            }
+          .def-input-half {
+            box-sizing: border-box;
+            width: calc(50% - 6px);
+            height: 48px;
+            padding: 10px 16px 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background: #fff;
+            line-height: 1.5;
+            font-size: 16px;
+            }
+            &__text {
+              font-weight: bold;
+            }
+            select {
+              width: 76px;
+              height: 48px;
+              background-color: white;
+            }
+            .form-info-text {
+              color: #888;
+              font-size: 14px;
+              margin: 8px 0 0;
+            }
+
+          }
+        .form__new-user__form {
+          margin: 40px 0 0;
+        }
+        .actions {
+          .nextpage-btn {
+            display: block;
+            width: 100%;
+            height: 48px;
+            font-size: 14px;
+            background-color: #ea352d;
+            color: white;
+            line-height: 48px;
+            text-align: center;
+            margin-top: 32px;
+          }
+        }
+        }
+      }
+    }
+  }
