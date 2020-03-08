@@ -32,7 +32,7 @@ ja:
         unconfirmed_email: 未確認Eメール
         unlock_token: ロック解除用トークン
         updated_at: 更新日
-      user_address:
+      users_address:
         address_first_name: 名字
         address_last_name: 名前
         address_first_name_kana: 名字（かな）
@@ -45,7 +45,7 @@ ja:
         address_phone_number: 電話番号
     models:
       user: ユーザー
-      user_address: 住所
+      users_address: 住所
   devise:
     confirmations:
       confirmed: アカウントを登録しました。
