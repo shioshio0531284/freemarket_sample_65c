@@ -414,4 +414,82 @@
       }
     }
   }
+  
+  .footer{
+    height: 350px;
+    width: 100%;
+    background-color: #272727;
+    .main{
+      .lists{
+        padding-top: 65px;
+        display: flex;
+        justify-content: center;
+        .list{
+          width: 300px;
+          height: 172px;
+          text-align: center;
+          
+          &__title{
+            font-size: 16px;
+            font-weight: bolder;
+            color: white;
+          }
+          ul{
+            list-style: none;
+            padding: 20px 0;
+            li {
+              padding: 8px;
+            }
+            #list__link{
+              text-decoration: none;
+              color: white;
+              font-size: 12px;
+              &:hover {
+                text-decoration:underline;
+                }
+            }
+            
+          }
+          
+        }
+      }
+    }
+    .content{
+      text-align: center;
+      &__link{
+        text-decoration: none;
+        &__logo{
+          height: 50px;
+          width: 160px;
+        }
+      }
+      p {
+        color: white;
+        font-size: 14px;
+      }
+    }
+  }
+  .listing-btn{
+    position: fixed;
+    bottom: 32px; 
+    right: 32px;
+    display: flex;
+    flex-direction: column;
+    background-color: #3CCACE;
+    width: 90px;
+    text-align: center;
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 4%; 
+    .listing-btn__link{
+      text-decoration: none;
+      &__text{
+        color: white;
+      }
+      &__icon{
+        color: white;
+        padding-top: 10px;
+      }
+    }
+  }
 }
