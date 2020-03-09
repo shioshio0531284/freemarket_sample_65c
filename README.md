@@ -22,7 +22,6 @@ pass : team65c
 |birth_month|integer|null: false|
 |birth_day|integer|null: false|
 |phone_number|string|null: false, unique: true|
-
 ### Associatioin
 - has_many :items
 - has_many :item_comments, dependent: :destroy
@@ -31,6 +30,7 @@ pass : team65c
 - has_many :bought_items, foreign_key: "buyer_id", class_name: "Item"
 - has_many :selling_items, -> { where("buyer_id is NULL") }, foreign_key: "seller_id", class_name: "Item"
 - has_many :sold_items, -> { where("buyer_id is not NULL") }, foreign_key: "seller_id", class_name: "Item"
+
 
 
 ## users_addressテーブル
@@ -47,16 +47,26 @@ pass : team65c
 |building_name|string||
 |address_phone_number|string||
 |user_id|references|null: false,foreign_key: true|
-
 ### Associatioin
 - belongs_to :user
+
+
+
+## credit_cardsテーブル 
+|Column|Type|Options|
+|------|----|-------|
+|user_id|references|null: false,foreign_key: true|
+|card_id|integer|null: false|
+|customer_id|integer|null: false|
+### Association
+- belongs_to :user
+
 
 
 ## itemsテーブル (商品)
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|image|string|null: false|
 |description|text|null: false| #description:商品説明
 |status|integer|null: false| #status:商品状態
 |postage|string|null: false|  #postage:配送料の負担
@@ -67,27 +77,27 @@ pass : team65c
 |category_id|references|null: false,foreign_key: true|
 |size|text||
 |brand|text||
+|buyer_id|integer|class_name: "User"|
 |seller_id|integer|class_name: "User"|
-|seller_id|integer|class_name: "User"|
-
-
 ### Associatioin
 - belongs_to :user
 - has_many :item_comments, dependent: :destroy
+- has_many :images
 - belongs_to :category
 - belongs_to :brand
 - belongs_to :buyer, class_name: 'User', foreign_key: 'buyer_id'
 - belongs_to :seller, class_name: 'User', foreign_key: 'seller_id'
+- accepts_nested_attributes_for :images, allow_destroy: true
 
-## credit_cardsテーブル 
+
+## imagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|references|null: false,foreign_key: true|
-|card_id|integer|null: false|
-|customer_id|integer|null: false|
+|src|string|null: false|
+|item|references|null: false,foreign_key: true|
+### Associatioin
+- belongs_to :item
 
-### Association
-- belongs_to :user
 
 
 ## item_commentsテーブル (商品に対するコメント)
@@ -96,38 +106,36 @@ pass : team65c
 |text|text|null: false|
 |user_id|references|null: false,foreign_key: true|
 |item_id|references|null: false,foreign_key: true|
-
 ### Associatioin
 - belongs_to :user
 - belongs_to :item_id
+
 
 
 ## categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |genre|string|null: false, unique: true|
-
 ### Associatioin
 - has_many :items
 - has_many :brands, through:brand_categories
+
+
 
 ## brand_categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |brand_id|integer|null: false, foreign_key: true|
 |category_id|integer|null: false, foreign_key: true|
-
+### Associatioin
 - belongs_to :categories
 - belongs_to :brands
-
-### Associatioin
 
 
 ## brandsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |genre|string|null: false|
-
 ### Associatioin
 - has_many :categories, through:brand_categories
 
