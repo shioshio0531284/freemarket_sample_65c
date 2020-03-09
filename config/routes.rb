@@ -8,4 +8,16 @@ Rails.application.routes.draw do
   end
   root 'items#index'
   resources :items
+
+  resources :users, only: [:new, :index] do
+    collection do
+      get 'mypage'
+      get '_logout'
+      get '_side-bar'
+      get '_card_registration'
+    end
+  end
+
+  resources :signups, only: [:index] do
+  end
 end
