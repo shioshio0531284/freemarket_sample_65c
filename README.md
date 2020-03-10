@@ -18,9 +18,7 @@ pass : team65c
 |nickname|string|null: false, unique: true|
 |email|string|null: false, unique: true|
 |password|string|null: false|
-|birth_year|integer|null: false|
-|birth_month|integer|null: false|
-|birth_day|integer|null: false|
+|birth_date|date|null:false|
 |phone_number|string|null: false, unique: true|
 ### Associatioin
 - has_many :items
