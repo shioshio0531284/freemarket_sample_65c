@@ -107,6 +107,16 @@
       .picup__subtitle
         = link_to '#', class: 'picup__subtitle__link' do
           新規投稿商品
+      
+
+
+      = link_to '出品', new_item_path
+      %br/
+      .contents
+        = render @items
+
+
+
       .lists
         .list
           = link_to 'http://beourguest.jp/2019/04/27/land-sea-disney-easter-2019-pin-badge-goods/', class: "list__link" do
