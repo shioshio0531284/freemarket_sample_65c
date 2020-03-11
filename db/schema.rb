@@ -22,12 +22,12 @@ ActiveRecord::Schema.define(version: 2020_03_09_115735) do
 
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
-    t.text "description", null: false
-    t.text "status", null: false
-    t.string "postage", null: false
-    t.string "delivery_way", null: false
-    t.string "delivery_area", null: false
-    t.string "delivery_date", null: false
+    t.text "description"
+    t.text "status"
+    t.string "postage"
+    t.string "delivery_way"
+    t.string "delivery_area"
+    t.string "delivery_date"
     t.integer "price", null: false
     t.text "category"
     t.text "size"
