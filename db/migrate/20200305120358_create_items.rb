@@ -2,12 +2,12 @@ class CreateItems < ActiveRecord::Migration[5.2]
   def change
     create_table :items do |t|
       t.string :name ,  null:false
-      t.text :description, null:false
-      t.text :status, null:false
-      t.string :postage, null:false
-      t.string :delivery_way, null:false
-      t.string :delivery_area, null:false
-      t.string :delivery_date, null:false
+      t.text :description
+      t.text :status
+      t.string :postage
+      t.string :delivery_way
+      t.string :delivery_area
+      t.string :delivery_date
       t.integer :price, null:false
       t.text :category
       t.text :size 
