@@ -1,12 +1,13 @@
 .header
   .header__content
     .main
-      = image_tag src='material/logo/logo.png', class: 'main__logo'
-      .main__search
-        .search--text
-          キーワードから検索
-        .search--btn
-          = icon('fas', 'fas fa-search fa-lg', id: 'icon')
+      = link_to '#', class: 'main__link' do
+        = image_tag src='material/logo/logo.png', class: 'main__logo'
+        .main__search
+          .search--text
+            キーワードから検索
+          .search--btn
+            = icon('fas', 'fas fa-search fa-lg', id: 'icon')
     .lists
       .list--left
         %ul
