@@ -18,9 +18,11 @@
  @import "font-awesome-sprockets";
  @import "font-awesome";
  @import "./items.scss";
- @import "devise/signup.scss";
  @import 'mypage';
  @import 'side-bar';
  @import 'logout';
  @import './card_registration';
- @import "signups.scss";
+ @import "signups";
+ @import "devise/mixin-for-login";
+ @import "devise/signup";
+ @import "sabfooter";
