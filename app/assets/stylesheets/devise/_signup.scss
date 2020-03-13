@@ -1,5 +1,187 @@
 .new-user-header {
- 
+  .contents{
+    width: 1440px;
+    background-color: #eeecec;
+    font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  
+    .header{
+      height: 128px;
+      background-color: #eeecec;
+      .fmarket{
+        height: 90px;
+        width: 200px;
+        left: 350px;
+        position: relative;
+      
+        &__box{
+          .logo{
+            margin: 35px 10px 10px;
+            width: 185px;
+            height: 49px;
+          }
+        }
+      }
+      .clearfix{
+        width: 500px;
+        height: 40px;
+        position: relative;
+        left: 595px;
+        bottom: 54px;
+        display: flex;
+        background-color: #eeecec;
+        .progress-bar1{
+          position: relative;
+          z-index: 1;
+          &__0{
+            font-weight: 600;
+            font-size: 12px;
+            position: relative;
+            color: #ea352d;
+            right: 3px;
+          }
+          &__x{
+            background-color: #ea352d;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: center;
+            position: absolute;
+            top: 23px;
+            left: 15px;
+          }
+          &__x::after{
+            background-color: #ccc;
+            height: 2px;
+            width: 109px;
+            position: absolute;
+            z-index: -1;
+            display: inline-block;
+            vertical-align: center;
+            content: '';
+            bottom: 5px;
+          }
+        }
+        .progress-bar2{
+          font-weight: 400;
+          font-size: 12px;
+          position: relative;
+          z-index: 1;
+          color: gray;
+          left: 43px;
+  
+          &__x{
+            background-color: #ccc;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            position: absolute;
+            display: inline-block;
+            vertical-align: center;
+            top: 23px;
+            left: 30px;
+          }
+          &__x::after{
+            background-color: #ccc;
+            height: 2px;
+            width: 125px;
+            position: absolute;
+            z-index: -1;
+            display: inline-block;
+            vertical-align: center;
+            content: '';
+            bottom: 5px;
+          }
+        }
+        .progress-bar3{
+          font-weight: 400;
+          font-size: 12px;
+          position: relative;
+          z-index: 1;
+          color: gray;
+          left: 83px;
+  
+          &__x{
+            background-color: #ccc;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            position: absolute;
+            display: inline-block;
+            vertical-align: center;
+            top: 23px;
+            left: 42px;
+          }
+          &__x::after{
+            background-color: #ccc;
+            height: 2px;
+            width: 120px;
+            position: absolute;
+            z-index: -1;
+            display: inline-block;
+            vertical-align: center;
+            content: '';
+            bottom: 5px;
+          }
+        }
+        .progress-bar4{
+          font-weight: 400;
+          font-size: 12px;
+          position: relative;
+          z-index: 1;
+          color: gray;
+          left: 123px;
+  
+          &__x{
+            background-color: #ccc;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            position: absolute;
+            display: inline-block;
+            vertical-align: center;
+            top: 23px;
+            left: 25px;
+          }
+          &__x::after{
+            background-color: #ccc;
+            height: 2px;
+            width: 100px;
+            position: absolute;
+            z-index: -1;
+            display: inline-block;
+            vertical-align: center;
+            content: '';
+            bottom: 5px;
+          }
+        }
+        .progress-bar5{
+          font-weight: 400;
+          font-size: 12px;
+          position: relative;
+          z-index: 1;
+          color: gray;
+          left: 145px;
+          &__0{
+            position: relative;
+            left: 36px;
+          }
+  
+          &__x{
+            background-color: #ccc;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            position: absolute;
+            display: inline-block;
+            vertical-align: center;
+            top: 23px;
+            left: 42px;
+          }
+        }
+      }
+    }
+  }
 }
 
 .new-user-main {

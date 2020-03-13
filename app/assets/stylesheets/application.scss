@@ -23,6 +23,5 @@
  @import 'logout';
  @import './card_registration';
  @import "signups";
- @import "devise/mixin-for-login";
- @import "devise/signup";
+ @import "./devise/signup";
  @import "sabfooter";
