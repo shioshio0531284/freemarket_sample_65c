@@ -20,6 +20,7 @@ class ItemsController < ApplicationController
   end
 
   def edit
+
   end
 
   def update
@@ -35,11 +36,10 @@ class ItemsController < ApplicationController
     redirect_to root_path
   end
 
-
   private
 
   def item_params
-    params.require(:item).permit(:name, :price, images_attributes:  [:src, :_destroy, :id])
+    params.require(:item).permit(:name, :price, images_attributes:[:src, :_destroy, :id])
   end
 
   def set_item
