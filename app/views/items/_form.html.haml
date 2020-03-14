@@ -19,6 +19,6 @@
         = image.check_box :_destroy, data:{ index: image.index }, class: 'hidden-destroy'
     - if @item.persisted?
       .js-file_group{ "data-index": "#{ @item.images.count}"}
-        = file_field_tag :src, name: "item[images_attributes][#{@item.images.count}][src]", class: 'js-file'
+        = f.file_field :src, name: "item[images_attributes][#{@item.images.count}][src]", class: 'js-file'
         .js-remove 削除
   = f.submit
