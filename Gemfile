@@ -84,7 +84,3 @@ gem 'haml-rails'
 gem 'jquery-rails'
 gem 'mini_magick'
 gem 'pry-rails'
-
-
-
-
