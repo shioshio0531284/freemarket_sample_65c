@@ -1,5 +1,5 @@
 .new-user-header
-  =render 'products/sabheader'
+  =render 'signups/sabheader'
   
 .new-user-main
   .new-user-main__box
@@ -51,11 +51,11 @@
               = f.text_field :last_name, placeholder: "例）彩" , class: "def-input-half"
           .form__new-user__group
             .form__new-user__group-space
-              = f.label :"お名前(カナ)", class: "form__new-user__group-text"
+              = f.label :"お名前(かな)", class: "form__new-user__group-text"
               %span.form__new-user__group--alert 必須
               %br/
-              = f.text_field :first_name_kana, placeholder: "例）ヤマダ", class: "def-input-half"
-              = f.text_field :last_name_kana, placeholder: "例）アヤ", class: "def-input-half"
+              = f.text_field :first_name_kana, placeholder: "例）やまだ", class: "def-input-half"
+              = f.text_field :last_name_kana, placeholder: "例）あや", class: "def-input-half"
           .form__new-user__group
             .form__new-user__group-space
               = f.label :生年月日, class: "form__new-user__group-text"
@@ -71,5 +71,5 @@
             = f.submit "次へ進む", class: "nextpage-btn"
 
 .signup-footer
-  = render 'products/sabfooter'
+  = render 'signups/sabfooter'
 
