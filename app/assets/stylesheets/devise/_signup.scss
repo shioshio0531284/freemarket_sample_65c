@@ -99,69 +99,7 @@
           position: relative;
           z-index: 1;
           color: gray;
-          left: 83px;
-  
-          &__x{
-            background-color: #ccc;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            position: absolute;
-            display: inline-block;
-            vertical-align: center;
-            top: 23px;
-            left: 42px;
-          }
-          &__x::after{
-            background-color: #ccc;
-            height: 2px;
-            width: 120px;
-            position: absolute;
-            z-index: -1;
-            display: inline-block;
-            vertical-align: center;
-            content: '';
-            bottom: 5px;
-          }
-        }
-        .progress-bar4{
-          font-weight: 400;
-          font-size: 12px;
-          position: relative;
-          z-index: 1;
-          color: gray;
-          left: 123px;
-  
-          &__x{
-            background-color: #ccc;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            position: absolute;
-            display: inline-block;
-            vertical-align: center;
-            top: 23px;
-            left: 25px;
-          }
-          &__x::after{
-            background-color: #ccc;
-            height: 2px;
-            width: 100px;
-            position: absolute;
-            z-index: -1;
-            display: inline-block;
-            vertical-align: center;
-            content: '';
-            bottom: 5px;
-          }
-        }
-        .progress-bar5{
-          font-weight: 400;
-          font-size: 12px;
-          position: relative;
-          z-index: 1;
-          color: gray;
-          left: 145px;
+          left: 50px;
           &__0{
             position: relative;
             left: 36px;
