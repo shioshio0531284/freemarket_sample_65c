@@ -9,4 +9,5 @@ class User < ApplicationRecord
   validates :first_name_kana, :last_name_kana, format: { with: /\A[ぁ-んー－]+\z/, message: "は全角ひらがなで入力してください" }
 
   has_one :users_address
+  has_many :items
 end

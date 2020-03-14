@@ -6,7 +6,9 @@ Rails.application.routes.draw do
     get 'users_addresses', to: 'users/registrations#new_users_address'
     post 'users_addresses', to: 'users/registrations#create_users_address'
   end
+  
   root 'items#index'
+  resources :items
 
   resources :users, only: [:new, :index] do
     collection do
