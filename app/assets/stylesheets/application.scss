@@ -17,7 +17,8 @@
  @import "./reset";
  @import "font-awesome-sprockets";
  @import "font-awesome";
- @import "./items.scss";
+ @import "items.scss";
+ @import "devise/signup.scss";
  @import 'mypage';
  @import 'side-bar';
  @import 'logout';
@@ -25,3 +26,7 @@
  @import "signups";
  @import "./devise/signup";
  @import "sabfooter";
+ @import "signups.scss";
+ @import "header";
+ @import "footer";
+ @import "listing_btn"
