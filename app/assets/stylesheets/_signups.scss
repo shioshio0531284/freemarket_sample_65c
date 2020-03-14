@@ -16,9 +16,13 @@ a {
     display: inline-block;
     
     &__logo {
-     margin: 40px 0 0;
-     display: inline-block;
-    }
+      margin: 40px 0 0;
+      display: inline-block;
+      &__size {
+        height: 40px;
+        width: 140px;
+        }
+      }
   }
 
   .signup-main {
@@ -100,27 +104,6 @@ a {
             }
           }
         }
-    }
-  }
-  .signup-footer {
-    width: 456px;
-    height: 220px;
-    margin: 0 auto;
-    padding: 40px 0;
-    text-align: center;
-    .footer-links {
-      display: flex;
-      justify-content: space-around;
-      a {
-        font-size: 12px;
-        color:black;
-      }
-    }
-    &__logo {
-      margin: 40px auto 0;
-    }
-    .inc {
-      font-size: 13px;
     }
   }
 }

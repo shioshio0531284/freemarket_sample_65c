@@ -23,6 +23,9 @@
  @import 'side-bar';
  @import 'logout';
  @import './card_registration';
+ @import "signups";
+ @import "./devise/signup";
+ @import "sabfooter";
  @import "signups.scss";
  @import "header";
  @import "footer";
