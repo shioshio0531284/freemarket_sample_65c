@@ -6,8 +6,8 @@
     .new-user-main__box__title
       会員情報入力
     .new-user-main__box__contents
-      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-        = render "devise/shared/error_messages", resource: resource
+      = form_for(@user, url: user_registration_path) do |f|
+        = render "devise/shared/error_messages", resource: @user
         .new-user-main__box__contents__list
           .form__new-user__group
             = f.label :ニックネーム, class: "form__new-user__group-text"
