@@ -12,10 +12,11 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
-    if @item.save!
+    begin
+      @item.save!
       redirect_to root_path
-    else
-      render :new
+    rescue ActiveRecord::RecordInvalid
+      redirect_to new_item_path
     end
   end
 
