@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'card/new'
-  get 'card/show'
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }
@@ -22,5 +20,13 @@ Rails.application.routes.draw do
   end
 
   resources :signups, only: [:index] do
+  end
+
+  resources :card, only: [:new, :index] do
+    collection do
+      post 'index', to: 'card#show'
+      post 'create', to: 'card#create'
+      post 'destroy', to: 'card#destroy'
+    end
   end
 end
