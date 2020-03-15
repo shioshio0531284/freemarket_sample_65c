@@ -12,7 +12,7 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
-    begin 
+    begin
       @item.save!
       redirect_to root_path
     rescue ActiveRecord::RecordInvalid
