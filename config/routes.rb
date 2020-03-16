@@ -19,4 +19,7 @@ Rails.application.routes.draw do
 
   resources :signups, only: [:index] do
   end
+
+  resources :items, only: [:show] do
+  end
 end
