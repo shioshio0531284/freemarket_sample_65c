@@ -129,31 +129,30 @@
     margin: 0 auto;
     width: 700px;
     height: 50px;
-    font-size: 22px;
     padding: 32px;
     line-height: 100px;
     background-color: #fff;
-    font-weight: 50px, bold;
+    font-size: 22px;
+    font-weight: bold;
     border-bottom: solid;
     border-color: #eeecec;
   }
   &__main {
     width: 700px;
-    height: 50px;
+    height: 300px;
     background-color: #fff;
     margin: 0 auto;
-    padding: 40px 40px 64px;
+    padding: 40px 32px 64px;
     &__text {
       text-align: center;
       padding: 50px, 218px, 30px, 200px;
       font-size: larger;
-      font-weight: bold;
     }
   &__btn {
     margin-top: 40px;
     .done-btn {
       display: block;
-      width: 100%;
+      width: 50%;
       height: 48px;
       font-size: 14px;
       background-color: #ea352d;
@@ -161,6 +160,7 @@
       line-height: 48px;
       text-align: center;
       margin-top: 32px;
+      margin: 0 auto;
       }
     }
   } 
