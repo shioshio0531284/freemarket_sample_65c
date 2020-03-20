@@ -25,6 +25,21 @@ a:hover{
       font-size: 12px;
       vertical-align: top;
     }
+    .js-file_group{
+      input[type="file"]{
+        padding: 5px;
+      }
+      .js-remove{
+        background-color: blue;
+        margin: 0 0 0 8px;
+        padding: 2px 4px;
+        border-radius: 2px;
+        color: #fff;
+        font-size: 12px;
+        vertical-align: top;
+        width: 24px;
+      }
+    }
   }
   .item__name-description{
     padding: 30px;
@@ -47,7 +62,7 @@ a:hover{
         width: 100%;
         height: 20px;
         font-size: 14px;
-        font-family: "Source Sans Pro", Helvetica, Arial, "游ゴシック体", "YuGothic", "メイリオ", "Meiryo", sans-serif;
+        margin-top: 5px;
       }
       ::placeholder{
         padding: 5px 5px;
@@ -253,7 +268,7 @@ a:hover{
       width: 200px;
       height: 20px;
       font-size: 14px;
-      font-family: "Source Sans Pro", Helvetica, Arial, "游ゴシック体", "YuGothic", "メイリオ", "Meiryo", sans-serif;
+      margin-top: 5px;
     }
   }
   .item--submit{
