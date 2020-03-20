@@ -1,0 +1,134 @@
+// ログイン画面
+.top-main {
+  min-height: 100%;
+  font-family: 'Source Sans Pro', Helvetica , Arial, 'æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“', 'YuGothic', 'ãƒ¡ã‚¤ãƒªã‚ª', 'Meiryo', sans-serif;
+  font-size: 14px;
+  color: #333;
+  .login-box {
+    width: 456px;
+    margin: 0 auto;
+    background-color: #fff;
+    &__new-account {
+      padding: 32px 64px;
+      display: flex;
+      flex-direction: column;
+      &__btn {
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+        height: 48px;
+        margin-top: 8px;
+        background-color: #0099e8;
+        color: #fff;
+        line-height: 40px;
+      }
+    }
+    &__main-sns__btn {
+      padding: 32px 64px;
+      border-top: 1px solid #eee;
+      cursor: pointer;
+      .default-btn {
+        display: block;
+        width: 100%;
+        height: 48px;
+        line-height: 48px;
+        font-size: 14px;
+        border: 1px solid;
+        margin-bottom: 16px;
+      }
+
+      &--facebook {
+        text-align: center;
+        margin: 0 auto;
+        color: #fff;
+        background-color: #385185;
+        position: relative;
+        &-icon {
+          float: left;
+          position: absolute;
+          top: 10px;
+          left: 15px;
+          font-size: 26px;
+          }
+        }
+
+      &--google {
+        text-align: center;
+        margin: 0 auto;
+        color: #333333;
+        background-color: #fff;
+        border: solid 1px #333333;
+        position: relative;
+        &-icon {
+          float: left;
+          position: absolute;
+          top: 10px;
+          left: 15px;
+          font-size: 26px;
+          }
+        }
+      }
+
+    &__main-form {
+      padding: 24px 64px 32px;
+      &__mail{
+        .input-btn {
+          display: block;
+          width: 90%;
+          height: 35px;
+          line-height: 1.5px;
+          font-size: 14px;
+          border: 1px solid #ccc;
+        }
+        &__btn {
+          padding: 10px 16px 8px;
+          background: #fff;
+          font-size: 16px;
+          border-radius: 4px;
+        }
+      }
+      &__password{
+        .input-btn {
+          display: block;
+          width: 90%;
+          height: 35px;
+          line-height: 1.5px;
+          font-size: 14px;
+          border: 1px solid #ccc;
+        }
+        &__btn {
+          padding: 10px 16px 8px;
+          border-radius: 4px;
+          background: #fff;
+          font-size: 16px;
+          margin: 24px 0 0;
+        }
+      }
+        &__pass-remember {
+          margin: 20px 0 0;
+        }
+        &__login-btn {
+          .nextpage-btn {
+          display: block;
+          width: 100%;
+          height: 48px;
+          font-size: 14px;
+          background-color: #ea352d;
+          color: white;
+          line-height: 48px;
+          text-align: center;
+          margin-top: 32px;
+          margin: 24px 0 0;
+          }
+        }
+        &__coment {
+          display: block;
+          margin: 40px 0 0;
+            &-forgetpass{
+              color: #0099e8;
+              text-decoration: none;
+          }
+        }
+      }
+      }
+    }
