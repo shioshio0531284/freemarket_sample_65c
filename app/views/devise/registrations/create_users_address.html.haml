@@ -1,3 +1,16 @@
-%h2 登録完了
-.to_home
-  = link_to "トップへ戻る", root_path, method: :get
+.done-header
+  =render "signups/sabheader"
+
+.done-content
+  .done-content__top
+    会員登録完了
+  .done-content__main
+    .done-content__main__text
+      ありがとうございます。
+      %br/
+      登録が完了しました。
+    .done-content__main__btn
+      = link_to root_path, class: "done-btn" do
+        フリマアプリを始める
+
+=render "signups/sabfooter"
