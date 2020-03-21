@@ -43,9 +43,15 @@
         %li.side-bar--top__menu プロフィール
       .side-bar-box
         %li.side-bar--top__menu 発送元・お届け先住所変更
-      = link_to _card_registration_users_path ,class: 'side-bar-link' do
-        .side-bar-box
-          %li.side-bar--top__menu 支払い方法
+      - card = Card.where(user_id: current_user.id).first
+      -if card.blank?
+        = link_to _card_registration_users_path ,class: 'side-bar-link' do
+          .side-bar-box
+            %li.side-bar--top__menu 支払い方法
+      - else
+        = link_to card_index_path ,class: 'side-bar-link' do
+          .side-bar-box
+            %li.side-bar--top__menu 支払い方法
       .side-bar-box
         %li.side-bar--top__menu メール/パスワード
       .side-bar-box
