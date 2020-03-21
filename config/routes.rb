@@ -22,11 +22,11 @@ Rails.application.routes.draw do
   resources :signups, only: [:index] do
   end
 
-  resources :card, only: [:new, :index] do
+  resources :card, only: [:new, :show] do
     collection do
-      post 'index', to: 'card#show'
-      post 'create', to: 'card#create'
-      post 'destroy', to: 'card#destroy'
+      post 'show', to: 'card#show'
+      post 'pay', to: 'card#pay'
+      post 'delete', to: 'card#delete'
     end
   end
 end
