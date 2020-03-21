@@ -1,58 +1,78 @@
-%h2 住所情報登録
-= form_for @users_address do |f|
-  = render "devise/shared/error_messages", resource: @users_address
+.new-user-address-header
+  =render 'signups/sabheader'
 
-  .field
-    = f.label "名字"
-    %br/
-    = f.text_field :address_first_name
+.new-user-main
+  .new-user-main__box
+    .new-user-main__box__title
+      住所情報登録
+    .new-user-main__box__contents
+      = form_for @users_address do |f|
+        = render "devise/shared/error_messages", resource: @users_address
+        .new-user-main__box__contents__list
+          .form__new-user__group
+            = f.label "名字", class: "form__new-user__group-text"
+            %span.form__new-user__group--alert 必須
+            %br/
+            = f.text_field :address_first_name, placeholder: "例）山田", class: "def-input"
+          .form__new-user__group
+            .form__new-user__group-space
+            = f.label "名前", class: "form__new-user__group-text"
+            %span.form__new-user__group--alert 必須
+            %br/
+            = f.text_field :address_last_name, placeholder: "例）彩" , class: "def-input"
+          .form__new-user__group
+            .form__new-user__group-space
+            = f.label "名字（かな）", class: "form__new-user__group-text"
+            %span.form__new-user__group--alert 必須
+            %br/
+            = f.text_field :address_first_name_kana, placeholder: "例）やまだ", class: "def-input"
+          .form__new-user__group
+            .form__new-user__group-space
+            = f.label "名前（かな）", class: "form__new-user__group-text"
+            %span.form__new-user__group--alert 必須
+            %br/
+            = f.text_field :address_last_name_kana, placeholder: "例）あや", class: "def-input"
+          .form__new-user__group
+            .form__new-user__group-space
+            = f.label "郵便番号", class: "form__new-user__group-text"
+            %span.form__new-user__group--alert 必須
+            %br/
+            = f.text_field :post_number, placeholder: "1234567", class: "def-input"
+          .form__new-user__group
+            .form__new-user__group-space
+            = f.label "都道府県", class: "form__new-user__group-text"
+            %span.form__new-user__group--alert 必須
+            %br/
+            = f.text_field :prefectures, placeholder: "沖縄県", class: "def-input"
+          .form__new-user__group
+            .form__new-user__group-space
+            = f.label "市町村", class: "form__new-user__group-text"
+            %span.form__new-user__group--alert 必須
+            %br/
+            = f.text_field :city, placeholder: "沖縄市", class: "def-input"
+          .form__new-user__group
+            .form__new-user__group-space
+            = f.label "番地", class: "form__new-user__group-text"
+            %span.form__new-user__group--alert 必須
+            %br/
+            = f.text_field :house_number, placeholder: "胡屋5-7-1", class: "def-input"
+          .form__new-user__group
+            .form__new-user__group-space
+            = f.label "マンション名", class: "form__new-user__group-text"
+            %span.form__new-user__group--optional 任意
+            %br/
+            = f.text_field :building_name, placeholder: "沖縄こどもの国", class: "def-input"
+          .form__new-user__group
+            .form__new-user__group-space
+            = f.label "電話番号", class: "form__new-user__group-text"
+            %span.form__new-user__group--optional 任意
+            %br/
+            = f.text_field :address_phone_number, placeholder: "000-0000", class: "def-input"
+          .actions
+            = f.submit "次へ進む", class: "nextpage-btn"
 
-  .field
-    = f.label "名前"
-    %br/
-    = f.text_field :address_last_name
+.signup-footer
+  = render 'signups/sabfooter'
 
-  .field
-    = f.label "名字（かな）"
-    %br/
-    = f.text_field :address_first_name_kana
-
-  .field
-    = f.label "名前（かな）"
-    %br/
-    = f.text_field :address_last_name_kana
-
-  .field
-    = f.label "郵便番号"
-    %br/
-    = f.text_field :post_number
-
-  .field
-    = f.label "都道府県"
-    %br/
-    = f.text_field :prefectures
-
-  .field
-    = f.label "市町村"
-    %br/
-    = f.text_field :city
-
-  .field
-    = f.label "番地"
-    %br/
-    = f.text_field :house_number
-
-  .field
-    = f.label "マンション名"
-    %br/
-    = f.text_field :building_name
-
-  .field
-    = f.label "電話番号"
-    %br/
-    = f.text_field :address_phone_number
-
-  .actions
-    = f.submit "Sign up"
 
 = render "devise/shared/links"
