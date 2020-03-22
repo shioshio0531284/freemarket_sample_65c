@@ -3,7 +3,7 @@
     - item.images.each do |image|
       = image_tag image.src.url, class: "list__image"
     .details
-      %p= item.name
+      item.name
       .details__info
         %ul
           %li 
@@ -12,7 +12,7 @@
           %li
             = icon('fas', 'fas fa-star')
             0
-        %p （税込)
+        (税込)
 
   = link_to '編集', edit_item_path(item)
   = link_to '削除', item_path(item), method: :delete 
