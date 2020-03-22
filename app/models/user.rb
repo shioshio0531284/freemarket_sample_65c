@@ -10,4 +10,5 @@ class User < ApplicationRecord
 
   has_one :users_address
   has_many :items
+  has_many :cards
 end
