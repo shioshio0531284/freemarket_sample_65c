@@ -87,58 +87,9 @@
       .picup__subtitle
         = link_to '#', class: 'picup__subtitle__link' do
           新規投稿商品
-      
-
-
-      
-      %br/
-      .contents
-        = render @items
-
-
 
       .lists
-        .list
-          = link_to 'http://beourguest.jp/2019/04/27/land-sea-disney-easter-2019-pin-badge-goods/', class: "list__link" do
-            = image_tag src="http://beourguest.jp/wp-content/uploads/2019/04/IMG_7949.jpg", class: "list__image"
-            .details
-              %h3.name
-                product3
-              .details__info
-                %ul
-                  %li 500円
-                  %li
-                    = icon('fas', 'fas fa-star')
-                    0 
-                %p （税込）
-
-        .list
-          = link_to 'http://beourguest.jp/2019/04/27/land-sea-disney-easter-2019-pin-badge-goods/', class: "list__link" do
-            = image_tag src="http://beourguest.jp/wp-content/uploads/2019/04/IMG_7949.jpg", class: "list__image"
-            .details
-              %h3.name
-                product3
-              .details__info
-                %ul
-                  %li 500円
-                  %li
-                    = icon('fas', 'fas fa-star')
-                    0 
-                %p （税込）
-
-        .list
-          = link_to 'http://beourguest.jp/2019/04/27/land-sea-disney-easter-2019-pin-badge-goods/', class: "list__link" do
-            = image_tag src="http://beourguest.jp/wp-content/uploads/2019/04/IMG_7949.jpg", class: "list__image"
-            .details
-              %h3.name
-                product3
-              .details__info
-                %ul
-                  %li 500円
-                  %li
-                    = icon('fas', 'fas fa-star')
-                    0 
-                %p （税込）
+        = render @items
 
     .picup--contents
       %h2.picup__title

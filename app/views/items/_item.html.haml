@@ -1,9 +1,18 @@
-.content
-  %p= item.name
-  %p
-    = item.price
-    円
-  - item.images.each do |image|
-    = image_tag image.src.url
+.list
+  = link_to '#', class: "list__link" do
+    - item.images.each do |image|
+      = image_tag image.src.url, class: "list__image"
+    .details
+      %p= item.name
+      .details__info
+        %ul
+          %li 
+            = item.price
+            円
+          %li
+            = icon('fas', 'fas fa-star')
+            0
+        %p （税込)
+
   = link_to '編集', edit_item_path(item)
   = link_to '削除', item_path(item), method: :delete 
