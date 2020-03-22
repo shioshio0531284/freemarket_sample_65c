@@ -3,7 +3,7 @@
     - item.images.each do |image|
       = image_tag image.src.url, class: "list__image"
     .details
-      item.name
+      = item.name
       .details__info
         %ul
           %li 
