@@ -1,0 +1,80 @@
+.item__content
+  = form_for @item do |f|
+    #image-box
+      商品画像
+      %span.item__image--alert 必須
+      #previews
+        - if @item.persisted?
+          - @item.images.each_with_index do |image, i|
+            = image_tag image.src.url, data: { index: i }, width: "100", height: '100' 
+      = f.fields_for :images do |image|
+        .js-file_group{ "data-index": "#{image.index}"}
+          =image.file_field :src, class: 'js-file'
+          %br/
+          %span.js-remove 削除
+        - if @item.persisted?
+          = image.check_box :_destroy, data:{ index: image.index }, class: 'hidden-destroy'
+      - if @item.persisted?
+        .js-file_group{ "data-index": "#{ @item.images.count}"}
+          = f.file_field :src, name: "item[images_attributes][#{@item.images.count}][src]", class: 'js-file'
+          .js-remove 削除
+    .item__name-description
+      .item__name
+        商品名
+        %span.item__image--alert 必須
+        .name--input
+        = f.text_field :name, placeholder: "40文字まで"
+      .item__description
+        商品の説明
+        %span.item__image--alert 必須
+        .description--input
+          (未実装)　商品の説明（1000文字以内) 
+          %br 
+          (色、素材、重さ、定価、注意点など)
+          %br
+          例) 2010年頃に買ったジャケットです。
+          %br
+          ライトグレーで傷はありません。あわせやすいのでおすすめです。
+    .item__detail
+      商品の詳細
+      .item__category
+        カテゴリー
+        %span.item__image--alert 必須
+        .category--input
+          (未実装)　選択してください
+      .item__brand
+        ブランド
+        .brand--input
+          (未実装)　選択してください
+      .item__status
+        商品の状態
+        %span.item__image--alert 必須
+        .status--input
+          (未実装)　選択してください
+    .item__delivery
+      配送について
+      .item__postage
+        配送料の負担
+        %span.item__image--alert 必須
+        .postage--input
+          (未実装)　選択してください
+      .item__delivery_area
+        発送元の地域
+        %span.item__image--alert 必須
+        .delivery_area--input
+          (未実装)　選択してください
+      .item__delivery_date
+        発送までの日数
+        %span.item__image--alert 必須
+        .delivery_data--input
+          (未実装)　選択してください
+    .item__price
+      販売価格
+      %span.item__image--alert 必須
+      %br
+      = f.number_field :price 
+      円
+    .item--submit
+      = f.submit
+    .move__toppage
+      = link_to "戻る", root_path

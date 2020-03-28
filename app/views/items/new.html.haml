@@ -1,0 +1,9 @@
+.wipper
+  .signup-header
+    .signup-header__logo
+      = link_to root_path do
+        = image_tag "material/logo/logo.png", class: "signup-header__logo__size"
+
+  = render partial: 'form'
+
+  = render 'signups/sabfooter'

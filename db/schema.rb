@@ -10,7 +10,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_29_101930) do
+ActiveRecord::Schema.define(version: 2020_03_14_094456) do
+
+  create_table "cards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "customer_id", null: false
+    t.string "card_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_cards_on_user_id"
+  end
+
+  create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "src"
+    t.bigint "item_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_images_on_item_id"
+  end
+
+  create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "description"
+    t.text "status"
+    t.string "postage"
+    t.string "delivery_way"
+    t.string "delivery_area"
+    t.string "delivery_date"
+    t.integer "price", null: false
+    t.text "category"
+    t.text "size"
+    t.text "brand"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_items_on_user_id"
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "first_name", null: false
@@ -21,7 +56,7 @@ ActiveRecord::Schema.define(version: 2020_02_29_101930) do
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.date "birth_date", null: false
-    t.string "phone_number", null: false
+    t.string "phone_number"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -48,5 +83,8 @@ ActiveRecord::Schema.define(version: 2020_02_29_101930) do
     t.index ["user_id"], name: "index_users_addresses_on_user_id"
   end
 
+  add_foreign_key "cards", "users"
+  add_foreign_key "images", "items"
+  add_foreign_key "items", "users"
   add_foreign_key "users_addresses", "users"
 end
