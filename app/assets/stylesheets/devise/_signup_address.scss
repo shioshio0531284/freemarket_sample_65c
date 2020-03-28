@@ -1,0 +1,257 @@
+.new-user-address-header {
+  .contents{
+    width: 1440px;
+    background-color: #eeecec;
+    font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  
+    .header{
+      height: 128px;
+      background-color: #eeecec;
+      .fmarket{
+        height: 90px;
+        width: 200px;
+        left: 350px;
+        position: relative;
+      
+        &__box{
+          .logo{
+            margin: 35px 10px 10px;
+            width: 185px;
+            height: 49px;
+          }
+        }
+      }
+      .clearfix{
+        width: 500px;
+        height: 40px;
+        position: relative;
+        left: 595px;
+        bottom: 54px;
+        display: flex;
+        background-color: #eeecec;
+        .progress-bar1{
+          position: relative;
+          z-index: 1;
+          &__0{
+            font-weight: 600;
+            font-size: 12px;
+            position: relative;
+            color: #ea352d;
+            right: 3px;
+          }
+          &__x{
+            background-color: #ea352d;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: center;
+            position: absolute;
+            top: 23px;
+            left: 15px;
+          }
+          &__x::after{
+            background-color: #ea352d;
+            height: 2px;
+            width: 109px;
+            position: absolute;
+            z-index: -1;
+            display: inline-block;
+            vertical-align: center;
+            content: '';
+            bottom: 5px;
+          }
+        }
+        .progress-bar2{
+          font-weight: 600;
+          font-size: 12px;
+          position: relative;
+          z-index: 1;
+          color: #ea352d;
+          left: 43px;
+  
+          &__x{
+            background-color: #ea352d;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            position: absolute;
+            display: inline-block;
+            vertical-align: center;
+            top: 23px;
+            left: 30px;
+          }
+          &__x::after{
+            background-color: #ccc;
+            height: 2px;
+            width: 125px;
+            position: absolute;
+            z-index: -1;
+            display: inline-block;
+            vertical-align: center;
+            content: '';
+            bottom: 5px;
+          }
+        }
+        .progress-bar3{
+          font-weight: 400;
+          font-size: 12px;
+          position: relative;
+          z-index: 1;
+          color: gray;
+          left: 50px;
+          &__0{
+            position: relative;
+            left: 36px;
+          }
+  
+          &__x{
+            background-color: #ccc;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            position: absolute;
+            display: inline-block;
+            vertical-align: center;
+            top: 23px;
+            left: 42px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.new-user-main {
+  background-color: #eeecec;
+  &__box {
+    width: 700px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding-bottom: 30px;
+    &__title {
+      height: 100px;
+      font-size: 22px;
+      line-height: 100px;
+      border-bottom: 1px solid rgb(221, 221, 221);
+      font-weight: bold;
+      text-align: center;
+    }
+    &__contents {
+      &__list {
+        padding: 40px 40px 64px; 
+        max-width: 343px;
+        margin: 0 auto;
+        .form__new-user__group {
+          box-sizing: border-box;
+          &-space {
+            margin: 24px 0 0;
+          }
+            &-text {
+              display: inline-block;
+              font-size: 14px;
+              font-weight: bold;
+              vertical-align: top;
+              text-align: left;
+            }
+            .single-text {
+              font-size: 14px;
+              margin: 8px 0 0;
+            }
+          &--alert {
+            background-color: #ea352d;
+            margin: 0 0 0 8px;
+            padding: 2px 4px;
+            border-radius: 2px;
+            color: #fff;
+            font-size: 12px;
+            vertical-align: top;
+          }
+          &--optional {
+            background-color: #ccc;
+            margin: 0 0 0 8px;
+            padding: 2px 4px;
+            border-radius: 2px;
+            color: #fff;
+            font-size: 12px;
+            vertical-align: top;
+          }
+          &-checkbox {
+            margin: 16px 0 0;
+            font-size: 14px;
+            position: relative;
+            .checkbox-btn {
+              position: absolute;
+              top: 50%;
+              left: 0;
+              width: 20px;
+              height: 20px;
+              z-index: 1;
+            }
+            .checkbox-defult {
+              position: absolute;
+              top: 50%;
+              left: 0;
+              z-index: 2;
+              cursor: pointer;
+              padding: 0 0 0 28px;
+            }
+          }
+          .def-input {
+            width: 100%;
+            margin: 8px 0 0;
+            height: 48px;
+            padding: 10px 16px 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            line-height: 1.5;
+            font-size: 16px;
+            box-sizing: border-box;
+            }
+          .def-input-half {
+            box-sizing: border-box;
+            width: calc(50% - 6px);
+            height: 48px;
+            padding: 10px 16px 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background: #fff;
+            line-height: 1.5;
+            font-size: 16px;
+            }
+            &__text {
+              font-weight: bold;
+            }
+            select {
+              width: 76px;
+              height: 48px;
+              background-color: white;
+            }
+            .form-info-text {
+              color: #888;
+              font-size: 14px;
+              margin: 8px 0 0;
+            }
+
+          }
+        .form__new-user__form {
+          margin: 40px 0 0;
+        }
+        .actions {
+          .nextpage-btn {
+            display: block;
+            width: 100%;
+            height: 48px;
+            font-size: 14px;
+            background-color: #ea352d;
+            color: white;
+            line-height: 48px;
+            text-align: center;
+            margin-top: 32px;
+          }
+        }
+        }
+      }
+    }
+  }
