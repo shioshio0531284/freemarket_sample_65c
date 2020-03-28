@@ -6,7 +6,9 @@ Rails.application.routes.draw do
     get 'users_addresses', to: 'users/registrations#new_users_address'
     post 'users_addresses', to: 'users/registrations#create_users_address'
   end
+  
   root 'items#index'
+  resources :items
 
   resources :users, only: [:new, :index] do
     collection do
@@ -20,6 +22,11 @@ Rails.application.routes.draw do
   resources :signups, only: [:index] do
   end
 
-  resources :items, only: [:show] do
+  resources :card, only: [:new, :show] do
+    collection do
+      post 'show', to: 'card#show'
+      post 'pay', to: 'card#pay'
+      post 'delete', to: 'card#delete'
+    end
   end
 end
