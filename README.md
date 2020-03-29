@@ -74,7 +74,7 @@ CVC　　　123　
 |postage|string|null: false|  #postage:配送料の負担
 |delivery_way|string|null: false| #delivery_way:配送方法
 |delivery_area|string|null: false| #delivery_area:発送元地域
-|delivery_date|string|null :false| #delivery_date:発送までの目安
+|delivery_day|string|null :false| #delivery_day:発送までの目安
 |price|integer|null: false|
 |category_id|references|null: false,foreign_key: true|
 |size|text||
