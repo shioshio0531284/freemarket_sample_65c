@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
   before_action :set_item, except: [:index, :new, :create]
 
   def index
-    @items = Item.includes(:images).order('id DESC').limit(3)
+    @items = Item.includes(:images).order('id DESC').limit(8)
   end
 
   def new
@@ -43,7 +43,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name, :price, images_attributes:[:src, :_destroy, :id]).merge(user_id: current_user.id)
+    params.require(:item).permit(:name, :description, :price, :status, :postage, :delivery_way, :delivery_area, :delivery_date, :category, :brand, :size, images_attributes:[:src, :_destroy, :id]).merge(user_id: current_user.id)
   end
 
   def set_item

@@ -28,46 +28,61 @@
         商品の説明
         %span.item__image--alert 必須
         .description--input
-          (未実装)　商品の説明（1000文字以内) 
-          %br 
-          (色、素材、重さ、定価、注意点など)
-          %br
-          例) 2010年頃に買ったジャケットです。
-          %br
-          ライトグレーで傷はありません。あわせやすいのでおすすめです。
+          = f.text_area :description, placeholder: "商品の説明（1000文字以内) "
+          -# %br 
+          -# (色、素材、重さ、定価、注意点など)
+          -# %br
+          -# 例) 2010年頃に買ったジャケットです。
+          -# %br
+          -# ライトグレーで傷はありません。あわせやすいのでおすすめです。
     .item__detail
       商品の詳細
       .item__category
         カテゴリー
         %span.item__image--alert 必須
         .category--input
-          (未実装)　選択してください
+          = f.select :category, Item.categories.keys, class:"select--wrap__default"
+          %i.fas.fa-angle-down
+      .item__size
+        サイズ
+        = f.select :size, Item.sizes.keys, class:"select--wrap__default"
+        %i.fas.fa-angle-down
       .item__brand
         ブランド
         .brand--input
-          (未実装)　選択してください
+          = f.text_field :brand
       .item__status
         商品の状態
         %span.item__image--alert 必須
         .status--input
-          (未実装)　選択してください
+          = f.select :status, Item.statuses.keys, class:"select--wrap__default"
+          %i.fas.fa-angle-down
     .item__delivery
       配送について
       .item__postage
         配送料の負担
         %span.item__image--alert 必須
         .postage--input
-          (未実装)　選択してください
+          = f.select :postage, Item.postages.keys, class:"select--wrap__default"
+          %i.fas.fa-angle-down
+      .item__delivery_way
+        配送の方法
+        %span.item__image--alert 必須
+        .delivery_way--input
+          = f.select :delivery_way, Item.delivery_ways.keys, class:"select--wrap__default"
+          %i.fas.fa-angle-down
       .item__delivery_area
         発送元の地域
         %span.item__image--alert 必須
         .delivery_area--input
-          (未実装)　選択してください
+          = f.select :delivery_area, Item.delivery_areas.keys, class:"select--wrap__default"
+          %i.fas.fa-angle-down
       .item__delivery_date
         発送までの日数
         %span.item__image--alert 必須
         .delivery_data--input
-          (未実装)　選択してください
+          = f.select :delivery_day, Item.delivery_days.keys, class:"select--wrap__default"
+          %i.fas.fa-angle-down
     .item__price
       販売価格
       %span.item__image--alert 必須
