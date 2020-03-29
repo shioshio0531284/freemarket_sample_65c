@@ -15,7 +15,16 @@
           %li ブランド
       .list--right
         - if user_signed_in?
-          = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'list--right__link'
+          = link_to "#", class: 'list--right__link' do
+            =icon('far','heart')
+            いいね！一覧
+          = link_to "#", class: 'list--right__link' do
+            =icon('far', 'bell')
+            お知らせ
+          = link_to mypage_users_path, method: :get, class: 'list--right__link' do
+            =icon('far', 'user')
+            マイページ
+          
         - else
           = link_to "ログイン", new_user_session_path, method: :get, class: 'list--right__link' 
           = link_to "新規会員登録", signups_path, method: :get, class: 'list--right__link'
