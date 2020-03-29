@@ -105,6 +105,45 @@
           text-decoration: none;
         }
       }
+      .item-edit-btn{
+        font-size: 25px;
+        line-height: 60px;
+        display: block;
+        margin-top: 20px;
+        background-color: #3CCACE;
+        text-align: center;
+        font-weight: 600;
+        &__content{
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+      .item-stop-btn{
+        font-size: 25px;
+        line-height: 60px;
+        display: block;
+        margin-top: 20px;
+        background-color: gray;
+        text-align: center;
+        font-weight: 600;
+        &__content{
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+      .item-destroy-btn{
+        font-size: 25px;
+        line-height: 60px;
+        display: block;
+        margin-top: 20px;
+        background-color: gray;
+        text-align: center;
+        font-weight: 600;
+        &__content{
+          color: #fff;
+          text-decoration: none;
+        }
+      }
     }
     .purchase-message{
       color: skyblue;
