@@ -1,8 +1,4 @@
 .listing-btn
-  - if user_signed_in?
-    = link_to new_item_path, class: 'listing-btn__link' do
-      .listing-btn__link__text 出品する
-      = icon('fas', 'far fa-camera fa-3x', class: 'listing-btn__link__icon')
-
-  - else
-    = link_to new_user_registration
+  = link_to new_item_path, class: 'listing-btn__link' do
+    .listing-btn__link__text 出品する
+    = icon('fas', 'far fa-camera fa-3x', class: 'listing-btn__link__icon')
