@@ -1,7 +1,4 @@
-.header
-
-.page__header
-  FURIMA  >  ログアウト
+= render 'items/header'
 
 .logout
   .logout__whole
@@ -12,4 +9,4 @@
         %button.form-logout__middle__btn
           = link_to "ログアウト", destroy_user_session_path, method: :delete
 
-.footer
+= render 'items/footer'
