@@ -1,0 +1,273 @@
+.wrapper__items-show{
+  background-color: #EEEEEE;
+  padding: 5px;
+}
+
+  .item-box{
+    padding:25px 40px 40px;
+    margin: 40px auto 0;
+    width: 600px;
+    border-style: solid;
+    border-width: 0;
+    background-color: white;
+    .item-content{
+      margin: 20px 0 0;
+    }
+    .item-name{
+      font-size: 25px;
+      text-align: center;
+    }
+    .item-main-content{
+      margin: 20px 0 0;
+      height: 400px;
+      position: relative;
+      .item-photo{
+        float: left;
+        &__content{
+          min-width: 300px;
+          max-width: 300px;
+          min-height: 375px;
+        }
+      }
+      .sold{
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+      }
+      .item-detail{
+        float: right;
+        max-width: 300px;
+        height: 400px;
+        margin: 0 auto;
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid #f5f5f5;
+        &__title{
+          width: 40%;
+          text-align: left;
+          font-weight: 400;
+          background: #fafafa;
+          border: 1px solid #f5f5f5;
+          padding: 8px;
+        }
+        &__content{
+          width: 60%;
+          background: #fff;
+          border-collapse: collapse;
+          border: 1px solid #f5f5f5;
+          padding: 8px;
+          &__user{
+            text-decoration: none;
+            color: #3CCACE;
+          }
+          &__users{
+            display: flex;
+            &__evaluation{
+              padding: 8px;
+              &__good{
+                color: red;
+              }
+              &__normal{
+                color: orange;
+              }
+              &__bad{
+                color: skyblue;
+              }
+            }
+          }
+        }
+      }
+    }
+    .item-price{
+      text-align: center;
+      margin: 20px 0 0;
+      &__main{
+        margin: 0 16px 0 0;
+        font-size: 50px;
+      }
+      &__tax{
+        font-size: 10px;
+      }
+      &__fee{
+        display: inline-block;
+        font-size: 16px;
+      }
+      .item-buy-btn{
+        font-size: 25px;
+        line-height: 60px;
+        display: block;
+        margin-top: 20px;
+        background-color: #3CCACE;
+        text-align: center;
+        font-weight: 600;
+        &__content{
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+      .item-edit-btn{
+        font-size: 25px;
+        line-height: 60px;
+        display: block;
+        margin-top: 20px;
+        background-color: #3CCACE;
+        text-align: center;
+        font-weight: 600;
+        &__content{
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+      .item-stop-btn{
+        font-size: 25px;
+        line-height: 60px;
+        display: block;
+        margin-top: 20px;
+        background-color: gray;
+        text-align: center;
+        font-weight: 600;
+        &__content{
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+      .item-destroy-btn{
+        font-size: 25px;
+        line-height: 60px;
+        display: block;
+        margin-top: 20px;
+        background-color: gray;
+        text-align: center;
+        font-weight: 600;
+        &__content{
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+    .purchase-message{
+      color: skyblue;
+      line-height: 2;
+      font-size: 15px;
+      margin-top: 15px;
+      text-align: center;
+    }
+    .item-description{
+      padding: 32px 0 0;
+      line-height: 2;
+      font-size: 20px;
+    }
+    .item-button{
+      margin: 15px;
+      display: flex;
+      justify-content: space-between;
+      &__left{
+        float: left;
+        &__like{
+          color: #333;
+          border: 1px solid #f5f5f5;
+          background: #f5f5f5;
+          display: inline-block;
+          padding: 8px 16px;
+          border-radius: 40px;
+          &__heart{
+            font-weight: bold;
+            height: 10px;
+            width: 10px;
+          }
+        }
+        &__center{
+          color: #333;
+          border: 1px solid #f5f5f5;
+          background: #f5f5f5;
+          display: inline-block;
+          padding: 8px 16px;
+          border-radius: 40px;
+          &__flag{
+            font-weight: bold;
+            height: 10px;
+            width: 10px;
+          }
+        }
+      }
+      &__right{
+        margin: 8px 0 0;
+        display: inline-block;
+        border-style: none;
+        &__text{
+          color: skyblue;
+          text-decoration: none;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  .item-detail-message{
+    width: 700px;
+    margin: 8px auto;
+    .message-container{
+      .message-content{
+        padding: 25px;
+        background: #fff;
+        &__alert{
+          padding: 8px;
+          font-size: 15px;
+          background: #fff;
+        }
+        &__text{
+          margin: 8px 0 0;
+          display: block;
+          width: 100%;
+          max-width: 100%;
+          min-height: 100px;
+          border: 1px solid #ccc;
+          background: #fff;
+          font-size: 15px;
+        }
+        &__btn{
+          width: 100%;
+          font-size: 15px;
+          margin: 8px 0 0;
+          text-align: center;
+          background: #aaa;
+          color: #fff;
+          height: 60px;
+        }
+      }
+    }
+  }
+  .product-link{
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+    margin: 8px auto;
+    .item-btn{
+      color: skyblue;
+      text-decoration: none;
+    }
+  }
+  .product-social-media-box{
+    margin: 25px auto;
+    padding: 30px 0 25px;
+    width: 700px;
+    border: 1px solid #ccc;
+    background: #fff;
+    .social-media-box{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &__content{
+        display: inline-block;
+        margin: 0 12px 12px 0;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 30px;
+        &__icon{
+          width: 45px;
+          height: 45px;
+          border-radius: 4px;
+          line-height: 45px;
+        }
+      }
+    }
+  }
