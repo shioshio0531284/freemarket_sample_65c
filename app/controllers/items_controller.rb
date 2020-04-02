@@ -50,7 +50,7 @@ class ItemsController < ApplicationController
   def set_item
     @item = Item.find(params[:id])
   end
-
+  
   def login_chack
     unless user_signed_in?
       redirect_to signups_path
