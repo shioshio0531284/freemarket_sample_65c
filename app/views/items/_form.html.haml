@@ -35,13 +35,13 @@
         カテゴリー
         %span.item__image--alert 必須
         .category--input
-          = f.select :category, Item.categories.keys, {}, {class: 'select--wrap__default'}
+          = f.select :category, Item.categories.keys, { prompt: true}, {class: 'select--wrap__default'}
           %i.fas.fa-angle-down
       .item__size
         サイズ
         %span.item__image--optional 任意
         .size--input
-          = f.select :size, Item.sizes.keys, {}, {class: 'select--wrap__default'}
+          = f.select :size, Item.sizes.keys, { prompt: true}, {class: 'select--wrap__default'}
           %i.fas.fa-angle-down
       .item__brand
         ブランド
@@ -52,7 +52,7 @@
         商品の状態
         %span.item__image--alert 必須
         .status--input
-          = f.select :status, Item.statuses.keys, {}, {class: 'select--wrap__default'}
+          = f.select :status, Item.statuses.keys, { prompt: true}, {class: 'select--wrap__default'}
           %i.fas.fa-angle-down
     .item__delivery
       配送について
@@ -60,25 +60,25 @@
         配送料の負担
         %span.item__image--alert 必須
         .postage--input
-          = f.select :postage, Item.postages.keys, {}, {class: 'select--wrap__default'}
+          = f.select :postage, Item.postages.keys, { prompt: true}, {class: 'select--wrap__default'}
           %i.fas.fa-angle-down
       .item__delivery_way
         配送の方法
         %span.item__image--alert 必須
         .delivery_way--input
-          = f.select :delivery_way, Item.delivery_ways.keys, {}, {class: 'select--wrap__default'}
+          = f.select :delivery_way, Item.delivery_ways.keys, { prompt: true}, {class: 'select--wrap__default'}
           %i.fas.fa-angle-down
       .item__delivery_area
         発送元の地域
         %span.item__image--alert 必須
         .delivery_area--input
-          = f.select :delivery_area, Item.delivery_areas.keys, {}, {class: 'select--wrap__default'}
+          = f.select :delivery_area, Item.delivery_areas.keys, { prompt: true}, {class: 'select--wrap__default'}
           %i.fas.fa-angle-down
       .item__delivery_date
         発送までの日数
         %span.item__image--alert 必須
         .delivery_data--input
-          = f.select :delivery_day, Item.delivery_days.keys, {}, {class: 'select--wrap__default'}
+          = f.select :delivery_day, Item.delivery_days.keys, { prompt: true}, {class: 'select--wrap__default'}
           %i.fas.fa-angle-down
     .item__price
       販売価格

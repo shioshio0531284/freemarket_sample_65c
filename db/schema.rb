@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2020_03_14_094456) do
   end
 
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "src"
+    t.string "src", null: false
     t.bigint "item_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -31,15 +31,15 @@ ActiveRecord::Schema.define(version: 2020_03_14_094456) do
 
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
-    t.text "description"
-    t.integer "status", default: 0
-    t.integer "postage", default: 0
-    t.integer "delivery_way", default: 0
-    t.integer "delivery_area", default: 0
-    t.integer "delivery_day", default: 0
+    t.text "description", null: false
+    t.integer "status", null: false
+    t.integer "postage", null: false
+    t.integer "delivery_way", null: false
+    t.integer "delivery_area", null: false
+    t.integer "delivery_day", null: false
     t.integer "price", null: false
-    t.integer "category", default: 0
-    t.integer "size", default: 0
+    t.integer "category", null: false
+    t.integer "size"
     t.text "brand"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
