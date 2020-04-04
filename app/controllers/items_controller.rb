@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   before_action :set_item, except: [:index, :new, :create]
+  before_action :login_check, only: [:new, :edit, :update, :destroy]
 
   def index
     @items = Item.includes(:images).order('id DESC').limit(8)
@@ -48,5 +49,11 @@ class ItemsController < ApplicationController
 
   def set_item
     @item = Item.find(params[:id])
+  end
+  
+  def login_check
+    unless user_signed_in?
+      redirect_to signups_path
+    end
   end
 end
