@@ -2,4 +2,48 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  .content__title{
+    font-size: 25px;
+    .content__credit-card{
+      font-size: 14px;
+      &__inner{
+        #charge-form{
+          #card_number{
+
+          }
+          #cvc{
+  
+          }
+          #token_submit{
+  
+          }
+        }
+      }
+    }
+  }
 }
+
+.card_registration{
+    .form-card_registration{
+      &--top{
+
+      }
+
+      &--middle{
+        &--card{
+
+        }
+        &--add{
+
+        }
+        &__btn{
+
+        }
+      }
+      &--bottom{
+        &--last{
+
+        }
+      }
+    }
+}          
