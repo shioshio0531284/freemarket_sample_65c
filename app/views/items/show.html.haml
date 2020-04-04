@@ -33,11 +33,6 @@
               ブランド
             %td.item-detail__content
               = @item.brand
-              -# 下記、商品編集では選択項目がないのでそのままにしています
-              .item-detail__content__content
-                >メンズ
-              .item-detail__content__content__content
-                >トップス
           %tr
             %th.item-detail__title
               サイズ
@@ -70,7 +65,7 @@
               = @item.delivery_day
     .item-price
       %span.item-price__main
-        = @item.price
+        = "#{@item.price}円"
       %span.item-price__tax
         （税込）
       %span.item-price__fee
