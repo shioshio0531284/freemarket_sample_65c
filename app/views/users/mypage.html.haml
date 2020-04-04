@@ -11,7 +11,7 @@
             .mypage__user-icon
               =image_tag 'material/icon/user_icon.png', class: 'user-icon'
             .mypage__user-name
-              仮ユーザー
+              = current_user.nickname
             .mypage__user-status
               評価
               %span 0
