@@ -1,3 +1,5 @@
+= render 'items/header'
+
 %h2 購入を確定しますか？
 %p 
   = @item.name
@@ -16,3 +18,5 @@
 %br
 = form_tag(action: :pay, method: :post) do
   %button 購入する
+
+= render 'items/footer'
