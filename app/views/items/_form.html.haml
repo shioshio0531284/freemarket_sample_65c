@@ -1,4 +1,8 @@
 .item__content
+  - if @item.errors
+    %ul.errors__box
+      - @item.errors.full_messages.each do |message|
+        %li= message
   = form_for @item do |f|
     #image-box
       商品画像

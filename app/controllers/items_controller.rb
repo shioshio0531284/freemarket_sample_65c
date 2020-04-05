@@ -13,11 +13,10 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
-    begin
-      @item.save!
-      redirect_to root_path
-    rescue ActiveRecord::RecordInvalid
-      redirect_to new_item_path
+    if @item.save
+      redirect_to root_path, notice: "商品を出品しました"
+    else
+      render :new
     end
   end
 
@@ -27,7 +26,7 @@ class ItemsController < ApplicationController
 
   def update
     if @item.update(item_params)
-      redirect_to root_path
+      redirect_to root_path, notice: "商品を更新しました"
     else
       render :edit
     end
@@ -35,7 +34,7 @@ class ItemsController < ApplicationController
 
   def destroy
     if @item.destroy
-      redirect_to root_path
+      redirect_to root_path, notice: '商品を削除しました'
     else
       render :edit
     end

@@ -1,4 +1,7 @@
 .wrapper
+  - if flash[:notice]
+    .flash
+      = flash[:notice]
   = render 'header'
   .main
     .main--vanner
