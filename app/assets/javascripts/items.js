@@ -18,6 +18,7 @@ $(document).on('turbolinks:load', function() {
 
   // file_fieldのnameに動的なindexをつける為の配列
   let fileIndex = [1,2,3,4,5,6,7,8,9,10];
+  if ($('.js-file').length == 0) $('#image-box').append(buildFileField(fileIndex[0]));
   // 既に使われているindexを除外
   lastIndex = $('.js-file_group:last').data('index');
   fileIndex.splice(0, lastIndex);
