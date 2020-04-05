@@ -5,7 +5,7 @@
   .item-box
     .item-content
     %h1.item-name
-      =@item.neme
+      =@item.name
     .item-main-content
       .item-photo
         - @item.images.first(1).each do |image|
@@ -32,7 +32,7 @@
             %th.item-detail__title
               ブランド
             %td.item-detail__content
-               = @item.brand
+              = @item.brand
           %tr
             %th.item-detail__title
               サイズ
@@ -57,7 +57,7 @@
             %th.item-detail__title
               配送元地域
             %td.item-detail__content
-               = @item.delivery_area
+              = @item.delivery_area
           %tr
             %th.item-detail__title
               配送日の目安
