@@ -5,10 +5,11 @@
   .item-box
     .item-content
     %h1.item-name
-      車
+      =@item.neme
     .item-main-content
       .item-photo
-        =image_tag'material/pict/sample-itemdetail.jpeg'
+        - @item.images.first(1).each do |image|
+          = image_tag image.src.url
         .sold
       %table.item-detail
         %tbody
@@ -17,7 +18,7 @@
               出品者
             %td.item-detail__content
               = link_to mypage_users_path, class:"item-detail__content__user" do
-                user1
+                =@item.user.nickname
               .item-detail__content__users
                 .item-detail__content__users__evaluation-good
                 .item-detail__content__users__evaluation-normal
@@ -26,53 +27,49 @@
             %th.item-detail__title
               カテゴリー
             %td.item-detail__content
-              カテゴリー
+              = @item.category
           %tr
             %th.item-detail__title
               ブランド
             %td.item-detail__content
-              ブランド
-              .item-detail__content__content
-                >メンズ
-              .item-detail__content__content__content
-                >トップス
+               = @item.brand
           %tr
             %th.item-detail__title
               サイズ
             %td.item-detail__content
-              サイズ
+              = @item.size
           %tr
             %th.item-detail__title
               商品の状態
             %td.item-detail__content
-              商品の状態
+              = @item.status
           %tr
             %th.item-detail__title
               配送料の負担
             %td.item-detail__content
-              配送料の負担
+              = @item.postage
           %tr
             %th.item-detail__title
               配送の方法
             %td.item-detail__content
-              らくらくフリマ便
+              = @item.delivery_way
           %tr
             %th.item-detail__title
               配送元地域
             %td.item-detail__content
-              配送元地域
+               = @item.delivery_area
           %tr
             %th.item-detail__title
               配送日の目安
             %td.item-detail__content
-              配送日の目安
+              = @item.delivery_day
     .item-price
       %span.item-price__main
-        ¥50,000
+        = "#{@item.price}円"
       %span.item-price__tax
         （税込）
       %span.item-price__fee
-        送料込み
+        =@item.postage
       %p.item-buy-btn
         = link_to item_purchase_index_path(@item.id), class: 'item-buy-btn__content' do
           購入画面に進む
@@ -86,8 +83,7 @@
       この商品はらくらくフリマ便を利用しているため、アプリからのみ購入できます。
     .item-description
       %p.item-description__content
-        車です
-        中古です
+        =@item.description
     .item-button
       .item-button__left
         %button.item-button__left__like
