@@ -70,14 +70,19 @@
         （税込）
       %span.item-price__fee
         =@item.postage
+    - if user_signed_in?
+      -if @item.user_id == current_user.id
+        %p.item-edit-btn
+          = link_to "商品の編集", edit_item_path(@item.id), class: 'item-edit-btn__content'
+        %p.item-stop-btn
+          = link_to "出品を一旦停止する", "#", class: 'item-stop-btn__content'
+        %p.item-destroy-btn
+          = link_to "この商品を削除する", item_path(@item.id), method: :delete, class: 'item-destroy-btn__content'
+    - else
       %p.item-buy-btn
-        = link_to "購入画面に進む", "#", class: 'item-buy-btn__content'
-      %p.item-edit-btn
-        = link_to "商品の編集", edit_item_path(@item.id), class: 'item-edit-btn__content'
-      %p.item-stop-btn
-        = link_to "出品を一旦停止する", "#", class: 'item-stop-btn__content'
-      %p.item-destroy-btn
-        = link_to "この商品を削除する", item_path(@item.id), method: :delete, class: 'item-destroy-btn__content'
+        = link_to "購入画面に進む", new_user_session_path, class: 'item-buy-btn__content'
+              
+
     %p.purchase-message
       この商品はらくらくフリマ便を利用しているため、アプリからのみ購入できます。
     .item-description
