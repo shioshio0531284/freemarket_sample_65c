@@ -1,4 +1,8 @@
 .item__content
+  - if flash[:error].present?
+    %ul.errors__box
+      - flash[:error].each do |e|
+        %li= e
   = form_for @item do |f|
     #image-box
       商品画像
