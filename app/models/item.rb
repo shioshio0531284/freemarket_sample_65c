@@ -3,10 +3,10 @@ class Item < ApplicationRecord
   has_many :images, dependent: :destroy
   accepts_nested_attributes_for :images, allow_destroy: true 
   validates :images, :name, :description, :status, :postage, :delivery_way, :delivery_area, :delivery_day, :price, :category, presence: true
-  validates :images, length: { in: 1..10 , message: 'は１〜10枚添付してください' }
-  validates :name, length: { in: 1..40 , message: 'は40文字以内で入力してください' }
+  validates :images, length: { in: 1..10, message: 'は１〜10枚添付してください' }
+  validates :name, length: { in: 1..40, message: 'は40文字以内で入力してください' }
   validates :description, length: { in: 1..1000 , message: 'は1000文字以内で入力してください' }
-  validates :price, numericality: { greater_than_or_equal_to: 51 , less_than_or_equal_to: 999_999_999 , message: 'は51〜999999999円で入力してください' }
+  validates :price, numericality: { greater_than_or_equal_to: 51, less_than_or_equal_to: 999_999_999, message: 'は51〜999999999円で入力してください' }
 
   enum category: { 
     "レディース": 1, "メンズ": 2, "ベビー・キッズ": 3, "インテリア・住まい・小物": 4, "本・音楽・ゲーム": 5,
