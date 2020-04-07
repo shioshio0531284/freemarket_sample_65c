@@ -21,7 +21,7 @@ class PurchaseController < ApplicationController
       customer: card.customer_id,
       currency: 'jpy'
     )
-    if(charge = true)
+    if ( charge = true )
       @item = @item.update(buyer_id: current_user.id)
       redirect_to action: 'done'
     else
