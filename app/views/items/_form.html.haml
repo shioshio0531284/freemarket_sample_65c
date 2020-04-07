@@ -45,7 +45,7 @@
         サイズ
         %span.item__image--optional 任意
         .size--input
-          = f.select :size, Item.sizes.keys, { prompt: true}, {class: 'select--wrap__default'}
+          = f.select :size, Item.sizes.keys, { include_blank:true, prompt: true}, {class: 'select--wrap__default'}
           %i.fas.fa-angle-down
       .item__brand
         ブランド

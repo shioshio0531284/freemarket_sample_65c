@@ -20,6 +20,10 @@ class ItemsController < ApplicationController
     end
   end
 
+  def show
+
+  end
+
   def edit
 
   end
@@ -28,7 +32,7 @@ class ItemsController < ApplicationController
     if @item.update(item_params)
       redirect_to root_path, notice: "商品を更新しました"
     else
-      rediect_to new_item_path
+      redirect_to edit_item_path, flash: { error: @item.errors.full_messages }
     end
   end
 
@@ -36,7 +40,7 @@ class ItemsController < ApplicationController
     if @item.destroy
       redirect_to root_path, notice: '商品を削除しました'
     else
-      render :edit
+      redirect_to root_path, notice: '商品の削除に失敗しました'
     end
   end
 
