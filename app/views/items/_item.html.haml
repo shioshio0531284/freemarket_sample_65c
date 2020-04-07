@@ -1,9 +1,10 @@
 .list
   = link_to item_path(item.id), class: "list__link" do
     - item.images.each do |image|
-      = image_tag image.src.url, class: "list__image" 
-    .items-box_photo__sold
-      .items-box_photo__sold__inner SOLD
+      = image_tag image.src.url, class: "list__image"
+    -if item.buyer_id.present? 
+      .items-box_photo__sold
+        .items-box_photo__sold__inner SOLD
     .details
       = item.name
       .details__info
