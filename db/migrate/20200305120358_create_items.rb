@@ -13,6 +13,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.integer :size
       t.text :brand
       t.references :user, null: false, foreign_key: true
+      t.integer :buyer_id
       t.timestamps
     end
   end

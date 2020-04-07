@@ -85,10 +85,10 @@
           = f.select :delivery_day, Item.delivery_days.keys, { prompt: true}, {class: 'select--wrap__default'}
           %i.fas.fa-angle-down
     .item__price
-      販売価格
+      販売価格 
       %span.item__image--alert 必須
       %br
-      = f.number_field :price , min: 1
+      = f.number_field :price , min: 51
       円
     .item--submit
       = f.submit
