@@ -145,6 +145,19 @@
           text-decoration: none;
         }
       }
+      .item-soldout-btn {
+        font-size: 25px;
+        line-height: 60px;
+        display: block;
+        margin-top: 20px;
+        background-color: gray;
+        text-align: center;
+        font-weight: 600;
+        &__content{
+          color: #fff;
+          text-decoration: none;
+        }
+      }
     .purchase-message{
       color: skyblue;
       line-height: 2;
