@@ -10,8 +10,7 @@
       .photo__box
         %ul.photo__innner
           %li
-            - @item.images.first(1).each do |image|
-              = image_tag image.src.url, class: "main__image"
+            = image_tag @item.images.first.src.url, class: "main__image"
             %ul
               - @item.images.each do |image|
                 %li
