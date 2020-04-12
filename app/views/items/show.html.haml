@@ -7,9 +7,14 @@
     %h1.item-name
       =@item.name
     .item-main-content
-      .item-photo
-        - @item.images.first(1).each do |image|
-          = image_tag image.src.url
+      .photo__box
+        %ul.photo__innner
+          %li
+            = image_tag @item.images.first.src.url, class: "main__image"
+            %ul
+              - @item.images.each do |image|
+                %li
+                  = image_tag image.src.url, class: "image__list"
         .sold
       %table.item-detail
         %tbody
