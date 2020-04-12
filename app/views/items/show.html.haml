@@ -78,6 +78,9 @@
           = link_to "出品を一旦停止する", "#", class: 'item-stop-btn__content'
         %p.item-destroy-btn
           = link_to "この商品を削除する", item_path(@item.id), method: :delete, class: 'item-destroy-btn__content'
+      -elsif @item.buyer_id.present?
+        %p.item-soldout-btn
+          = link_to "売り切れました", "", class: 'item-soldout-btn__content'
       -else 
         %p.item-buy-btn
           = link_to "購入画面に進む", item_purchase_index_path(@item.id), class: 'item-buy-btn__content'
