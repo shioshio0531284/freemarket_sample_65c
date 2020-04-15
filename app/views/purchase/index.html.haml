@@ -1,10 +1,18 @@
 = render 'items/header'
 
-%h2 購入を確定しますか？
-%p 
-  = @item.name
-%p 
-  = "#{@item.price}円"
+%h2.buy-content__title
+    購入内容の確認
+  .buy-content__item
+    .buy-content__item__inner
+      .buy-item-main 
+        .buy-item-image
+          = image_tag "#{@item.images[0].url}", size: '64×64',class: 'buydetails-content__image'
+        .buy-item-detail
+          .buy-item-name
+            = @item.name
+            %p.buy-price 
+              = "#{@item.price}円"
+              %span.shipping-free（税込）送料込み
 %br
 %h3 支払い方法
 - if @default_card_information.blank?
