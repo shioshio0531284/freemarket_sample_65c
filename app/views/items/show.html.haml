@@ -11,6 +11,7 @@
         %ul.photo__innner
           %li
             = image_tag @item.images.first.src.url, class: "main__image"
+            =render 'sold_display', item: @item
             %ul
               - @item.images.each do |image|
                 %li
