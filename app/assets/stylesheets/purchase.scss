@@ -1,3 +1,70 @@
-// Place all the styles related to the purchase controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.wrapper__items-buy{
+  background-color: #EEEEEE;
+  padding: 5px;
+}
+
+  .buy-content__title{
+    padding:25px 40px 40px;
+    margin: 40px auto 0;
+    width: 620px;
+    border-style: solid;
+    border-width: 0;
+    background-color: white;
+    text-align: center;
+    font-size: 25px;
+      .buy-content__item1{
+       margin: 50px 0 0;
+        .buy-content__item__inner{
+          max-width: 350px;
+          margin: 0 auto;
+          .buy-item-main{
+            display: flex;
+            .buy-item-image{
+              height: 80px;
+              width: 80px;
+              min-width: 80px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              .main__image{
+                width: 150px;
+              }
+            }
+            .buy-item-detail{
+              margin-left: 40px;
+              .buy-item-name{
+                font-size: 15px;
+                margin: 0;
+                padding: 0 0 10px;
+                line-height: 1.5;
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+      .buy-content__item2{
+        margin: 50px;
+        padding-bottom: 48px;
+        .buy-form{
+          max-width: 350px;
+          margin: 0 auto;
+          .buy-price-table{
+            margin: 0;
+            display: table;
+            border-collapse: collapse;
+            width: 100%;
+            .buy-price-table__left{
+              text-align: left;
+              font-size: 20px;
+            }
+            .buy-price-table__right{
+              text-align: right;
+              font-size: 30px;
+              display: table-cell;
+              padding: 0;
+            }
+         }
+        }
+      }
+  }
