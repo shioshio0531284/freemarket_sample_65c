@@ -1,12 +1,16 @@
 = render 'items/header'
 
-%h2 購入が完了しました！
-%p 
-  = @item.name
-%p
-  = "#{@item.price}円"
-
-= link_to root_path, class: "done-btn" do
-  トップに戻る
+.wrapper__items-buy-done
+  %h2.items-buy-done-top
+    購入が完了しました！
+    .items-buy-done__image
+    = image_tag @item.images.first.src.url, class: "main__image"
+    .items-buy-done__item
+    = @item.name
+    .items-buy-done__yen
+    = "#{@item.price}円"
+    .items-buy-done__bottom
+    = link_to root_path, class: "done-btn" do
+      トップに戻る
 
 = render 'items/footer'

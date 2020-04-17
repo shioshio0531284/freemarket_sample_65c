@@ -21,13 +21,11 @@
             支払金額
           .buy-price-table__right
             = "#{@item.price}円"
-    .buy-content__user-info
-      .buy-content__user-info__inner
-        %h3 
-          支払い方法
-          .user-info-update
-            = link_to "変更する", "#", class: "update-btn"
+    .buy-content__user-info1
+      .buy-content__user-info
+        .buy-content__user-info__inner
           .user-info-text
+            支払い方法
           - if @default_card_information.blank?
             %br /
           - else
@@ -36,21 +34,26 @@
             - exp_month = @default_card_information.exp_month.to_s
             - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
             = "有効期限" + exp_month + " / " + exp_year
-            %br
-      .buy-content__user-info
-        .buy-content__user-info__inner
-          %h3 
-            配送先
           .user-info-update
             = link_to "変更する", "#", class: "update-btn"
+            %br
+    .buy-content__user-info2
+      .buy-content__user-info
+        .buy-content__user-info__inner
+          配送先
           .user-info-text
+            %br
             〒111-1111
             %br
-            東京都
+            東京
             %br
             ほげ
-            = form_tag(action: :pay, method: :post) do
-              %button.buy-button
-                = link_to "購入する", "#", class: "buy-button"
+          .user-info-update
+            = link_to "変更する", "#", class: "update-btn"
+        .buy-button
+        = form_tag(action: :pay, method: :post) do
+          %button.buy-button
+            = link_to "購入する", done_item_purchase_index_path, class: "buy-button"
+
 
 = render 'items/footer'
