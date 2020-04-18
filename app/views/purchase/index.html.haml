@@ -43,11 +43,15 @@
           配送先
           .user-info-text
             %br
-            〒111-1111
+            〒
+            = current_user.users_address.post_number
             %br
-            東京
+            = current_user.users_address.prefectures
+            = current_user.users_address.city
+            = current_user.users_address.house_number
             %br
-            ほげ
+            = current_user.first_name
+            = current_user.last_name
           .user-info-update
             = link_to "変更する", "#", class: "update-btn"
         .buy-button
