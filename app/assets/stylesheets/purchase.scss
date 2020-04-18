@@ -1,3 +1,129 @@
-// Place all the styles related to the purchase controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.wrapper__items-buy{
+  background-color: #EEEEEE;
+  padding: 5px;
+}
+
+  .buy-content__title{
+    padding:25px 40px 40px;
+    margin: 40px auto 0;
+    width: 620px;
+    border-style: solid;
+    border-width: 0;
+    background-color: white;
+    text-align: center;
+    font-size: 25px;
+      .buy-content__item{
+       margin: 50px 0 0;
+        &__inner{
+          max-width: 350px;
+          margin: 0 auto;
+          .buy-content__item__main{
+            display: flex;
+            &__image{
+              height: 80px;
+              width: 80px;
+              min-width: 80px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              .main__image{
+                width: 100%;
+                object-fit: cover;
+              }
+            }
+            &__detail{
+              margin-left: 95px;
+              &__name{
+                font-size: 15px;
+                margin: 0;
+                padding: 0 0 10px;
+                line-height: 1.5;
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+      .buy-content__item{
+        margin: 50px;
+        padding-bottom: 48px;
+        &__inner{
+          max-width: 350px;
+          margin: 0 auto;
+          .buy-content__item__price-table{
+            margin: 0;
+            display: table;
+            border-collapse: collapse;
+            width: 100%;
+            &__left{
+              font-size: 20px;
+              text-align: left;
+            }
+            &__right{
+              text-align: right;
+              font-size: 30px;
+              display: table-cell;
+              padding: 0;
+            }
+          }
+        }
+      }
+      .buy-content__user-card{
+        margin: 50px;
+        padding-bottom: 48px;
+        &__inner{
+          max-width: 350px;
+          margin: 0 auto;
+          &__text{
+            margin: 0;
+            display: table;
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 20px;
+            text-align: left;
+            &__card{
+              font-size: 20px;
+            }
+            &__update{
+              text-align: right;
+              display: table-cell;
+              padding: 0;
+              font-size: 15px;
+            }
+          }
+        }
+      }
+      .buy-content__user-address{
+        margin: 50px;
+        &__inner{
+          max-width: 350px;
+          margin: 0 auto;
+          &__text{
+            margin: 0;
+            display: table;
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 20px;
+            text-align: left;
+            &__address{
+              font-size: 20px;
+            }
+            &__update{
+              text-align: right;
+              display: table-cell;
+              padding: 0;
+              font-size: 15px;
+            }
+          }
+          .buy-button{
+            width: 100%;
+            line-height: 40px;
+            font-size: 20px;
+            text-align: center;
+            color: #fff;
+            border: 1px solid #3CCACE;
+            background-color: #3CCACE;
+          }
+        }
+      }
+  }
