@@ -12,14 +12,14 @@
     background-color: white;
     text-align: center;
     font-size: 25px;
-      .buy-content__item1{
+      .buy-content__item{
        margin: 50px 0 0;
-        .buy-content__item__inner{
+        &__inner{
           max-width: 350px;
           margin: 0 auto;
-          .buy-item-main{
+          .buy-content__item__main{
             display: flex;
-            .buy-item-image{
+            &__image{
               height: 80px;
               width: 80px;
               min-width: 80px;
@@ -31,9 +31,9 @@
                 width: 150px;
               }
             }
-            .buy-item-detail{
-              margin-left: 40px;
-              .buy-item-name{
+            &__detail{
+              margin-left: 95px;
+              &__name{
                 font-size: 15px;
                 margin: 0;
                 padding: 0 0 10px;
@@ -44,22 +44,22 @@
           }
         }
       }
-      .buy-content__item2{
+      .buy-content__item{
         margin: 50px;
         padding-bottom: 48px;
-        .buy-form{
+        &__inner{
           max-width: 350px;
           margin: 0 auto;
-          .buy-price-table{
+          .buy-content__item__price-table{
             margin: 0;
             display: table;
             border-collapse: collapse;
             width: 100%;
-            .buy-price-table__left{
+            &__left{
               font-size: 20px;
               text-align: left;
             }
-            .buy-price-table__right{
+            &__right{
               text-align: right;
               font-size: 30px;
               display: table-cell;
@@ -68,23 +68,23 @@
           }
         }
       }
-      .buy-content__user-info1{
+      .buy-content__user-card{
         margin: 50px;
         padding-bottom: 48px;
-        .buy-content__user-info{
+        &__inner{
           max-width: 350px;
           margin: 0 auto;
-          .buy-content__user-info__inner{
+          &__text{
             margin: 0;
             display: table;
             border-collapse: collapse;
             width: 100%;
             font-size: 20px;
             text-align: left;
-            .user-info-text{
+            &__card{
               font-size: 20px;
             }
-            .user-info-update{
+            &__update{
               text-align: right;
               display: table-cell;
               padding: 0;
@@ -93,22 +93,22 @@
           }
         }
       }
-      .buy-content__user-info2{
+      .buy-content__user-address{
         margin: 50px;
-        .buy-content__user-info{
+        &__inner{
           max-width: 350px;
           margin: 0 auto;
-          .buy-content__user-info__inner{
+          &__text{
             margin: 0;
             display: table;
             border-collapse: collapse;
             width: 100%;
             font-size: 20px;
             text-align: left;
-            .user-info-text{
+            &__address{
               font-size: 20px;
             }
-            .user-info-update{
+            &__update{
               text-align: right;
               display: table-cell;
               padding: 0;
