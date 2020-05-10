@@ -109,3 +109,10 @@ pass : team65c <br><br>
 |item|references|null: false,foreign_key: true|
 ### Associatioin
 - belongs_to :item
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 3151120ef91fe0ad115200a03faf179919f157de

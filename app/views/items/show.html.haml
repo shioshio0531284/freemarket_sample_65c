@@ -7,9 +7,15 @@
     %h1.item-name
       =@item.name
     .item-main-content
-      .item-photo
-        - @item.images.first(1).each do |image|
-          = image_tag image.src.url
+      .photo__box
+        %ul.photo__innner
+          %li
+            = image_tag @item.images.first.src.url, class: "main__image"
+            =render 'sold_display', item: @item
+            %ul
+              - @item.images.each do |image|
+                %li
+                  = image_tag image.src.url, class: "image__list"
         .sold
       %table.item-detail
         %tbody
@@ -70,14 +76,23 @@
         （税込）
       %span.item-price__fee
         =@item.postage
+    - if user_signed_in?
+      -if @item.user_id == current_user.id
+        %p.item-edit-btn
+          = link_to "商品の編集", edit_item_path(@item.id), class: 'item-edit-btn__content'
+        %p.item-stop-btn
+          = link_to "出品を一旦停止する", "#", class: 'item-stop-btn__content'
+        %p.item-destroy-btn
+          = link_to "この商品を削除する", item_path(@item.id), method: :delete, class: 'item-destroy-btn__content'
+      -elsif @item.buyer_id.present?
+        %p.item-soldout-btn
+          = link_to "売り切れました", "", class: 'item-soldout-btn__content'
+      -else 
+        %p.item-buy-btn
+          = link_to "購入画面に進む", item_purchase_index_path(@item.id), class: 'item-buy-btn__content'
+    - else
       %p.item-buy-btn
-        = link_to "購入画面に進む", "#", class: 'item-buy-btn__content'
-      %p.item-edit-btn
-        = link_to "商品の編集", edit_item_path(@item.id), class: 'item-edit-btn__content'
-      %p.item-stop-btn
-        = link_to "出品を一旦停止する", "#", class: 'item-stop-btn__content'
-      %p.item-destroy-btn
-        = link_to "この商品を削除する", item_path(@item.id), method: :delete, class: 'item-destroy-btn__content'
+        = link_to "購入画面に進む", new_user_session_path, class: 'item-buy-btn__content'
     %p.purchase-message
       この商品はらくらくフリマ便を利用しているため、アプリからのみ購入できます。
     .item-description

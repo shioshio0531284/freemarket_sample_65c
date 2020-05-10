@@ -1,4 +1,8 @@
 .item__content
+  - if flash[:error].present?
+    %ul.errors__box
+      - flash[:error].each do |e|
+        %li= e
   = form_for @item do |f|
     #image-box
       商品画像
@@ -41,7 +45,7 @@
         サイズ
         %span.item__image--optional 任意
         .size--input
-          = f.select :size, Item.sizes.keys, { prompt: true}, {class: 'select--wrap__default'}
+          = f.select :size, Item.sizes.keys, { include_blank:true, prompt: true}, {class: 'select--wrap__default'}
           %i.fas.fa-angle-down
       .item__brand
         ブランド
@@ -81,10 +85,10 @@
           = f.select :delivery_day, Item.delivery_days.keys, { prompt: true}, {class: 'select--wrap__default'}
           %i.fas.fa-angle-down
     .item__price
-      販売価格
+      販売価格 
       %span.item__image--alert 必須
       %br
-      = f.number_field :price , min: 1
+      = f.number_field :price , min: 51
       円
     .item--submit
       = f.submit

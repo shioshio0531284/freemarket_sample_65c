@@ -1,30 +1,30 @@
-.header
+= render 'items/header'
 
-.page__header
-  FURIMA  >  支払い方法
 
 .card_registration
   .card_registration__whole
     .card_registration__sidebar
       = render "users/side-bar"
-    .form-card_registration
-      .form-card_registration--top
-        支払い方法
-      .form-card_registration--middle
-        .form-card_registration--middle--card
-          %label 登録クレジットカード情報
+
+    .content
+      %h2 登録クレジットカード情報
+      .content__credit-card
+        .content__credit-card__registration
+          %label カード番号
           %br
+        .content__credit-card__number-look
           = "**** **** **** " + @default_card_information.last4
           %br
+        .content__credit-card__datelist-look
+          %label 有効期限
+          %br
+        .content__credit-card__date
           - exp_month = @default_card_information.exp_month.to_s
           - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
           = exp_month + " / " + exp_year
+        .content__credit-card__delete-button
           = form_tag(delete_card_index_path, method: :post, id: 'charge-form',  name: "inputForm") do
             %input{ type: "hidden", name: "card_id", value: "" }
             %button 削除する
 
-      .form-card_registration--bottom
-        .form-card_registration--bottom--last
-          支払い方法について
-
-.footer
+= render 'items/footer'

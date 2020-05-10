@@ -10,6 +10,10 @@ a:hover{
   width: 700px;
   margin: 0 auto;
   font-family: "Source Sans Pro", Helvetica, Arial, "游ゴシック体", "YuGothic", "メイリオ", "Meiryo", sans-serif;
+  .errors__box{
+    color:#ea352d;
+    padding: 10px;
+    }
   #image-box{
     padding: 30px;
     font-size: 14px;

@@ -43,24 +43,24 @@ ja:
         house_number: 番地
         building_name: マンション・アパート名
         address_phone_number: 電話番号
+      item:
+        images: 画像
+        name: 商品名
+        description: 商品の説明
+        category: カテゴリー
+        size: サイズ
+        brand: ブランド
+        status: 商品の状態
+        postage: 配送料の負担
+        delivery_way: 配送の方法
+        delivery_area: 発送元の地域
+        delivery_day: 発送までの日数
+        price: 販売価格
     models:
       user: ユーザー
       users_address: 住所
       item: 商品
       image: 画像
-      attributes:
-        item:
-          name: 商品名
-          description: 商品の説明
-          category: カテゴリー
-          size: サイズ
-          brand: ブランド
-          status: 商品の状態
-          postage: 配送料の負担
-          delivery_way: 配送の方法
-          delivery_area: 発送元の地域
-          delivery_day: 発送までの日数
-          price: 販売価格
   devise:
     confirmations:
       confirmed: アカウントを登録しました。

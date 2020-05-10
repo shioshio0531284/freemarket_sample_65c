@@ -2,6 +2,7 @@
   = link_to item_path(item.id), class: "list__link" do
     - item.images.first(1).each do |image|
       = image_tag image.src.url, class: "list__image"
+    =render 'sold_display', item: item
     .details
       = item.name
       .details__info

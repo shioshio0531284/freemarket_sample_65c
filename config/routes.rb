@@ -8,7 +8,14 @@ Rails.application.routes.draw do
   end
   
   root 'items#index'
-  resources :items
+  resources :items do
+    resources :purchase, only: [:index] do
+      collection do
+        post 'pay', to: 'purchase#pay'
+        get 'done', to: 'purchase#done'
+      end
+    end
+  end
 
   resources :users, only: [:new, :index] do
     collection do

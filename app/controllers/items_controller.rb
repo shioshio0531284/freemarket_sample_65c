@@ -13,12 +13,15 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
-    begin
-      @item.save!
-      redirect_to root_path
-    rescue ActiveRecord::RecordInvalid
-      redirect_to new_item_path
+    if @item.save
+      redirect_to root_path, notice: "商品を出品しました"
+    else
+      redirect_to new_item_path, flash: { error: @item.errors.full_messages }
     end
+  end
+
+  def show
+
   end
 
   def edit
@@ -27,17 +30,17 @@ class ItemsController < ApplicationController
 
   def update
     if @item.update(item_params)
-      redirect_to root_path
+      redirect_to root_path, notice: "商品を更新しました"
     else
-      render :edit
+      redirect_to edit_item_path, flash: { error: @item.errors.full_messages }
     end
   end
 
   def destroy
     if @item.destroy
-      redirect_to root_path
+      redirect_to root_path, notice: '商品を削除しました'
     else
-      render :edit
+      redirect_to root_path, notice: '商品の削除に失敗しました'
     end
   end
 
@@ -53,7 +56,7 @@ class ItemsController < ApplicationController
   
   def login_check
     unless user_signed_in?
-      redirect_to signups_path
+      redirect_to new_user_session_path
     end
   end
 end
