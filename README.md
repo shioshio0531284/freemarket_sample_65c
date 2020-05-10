@@ -1,14 +1,27 @@
+<img width="1430" alt="スクリーンショット 2020-05-04 15 50 20" src="https://user-images.githubusercontent.com/57986669/80942150-06f3e900-8e1f-11ea-89bd-3841dfb59309.png">
+
 # フリマクローンサイト
 http://18.178.238.209
 
 # Basic認証
-user : admin
-pass : team65c
+user : admin <br>
+pass : team65c <br><br>
 
-# クレジトッカードのテストカード情報
-カード番号　4242424242424242
-有効期限　12/20
-CVC　　　123　
+■ テスト用アカウント<br>
+◯ 購入者用<br>
+メールアドレス：buyer@hoge.com<br>
+パスワード：buyer1234<br><br>
+
+◯ 購入用カード情報<br>
+番号：4242424242424242<br>
+期限：12/22<br>
+セキュリティカード：123<br>
+
+◯ 出品者用<br>
+メールアドレス：seller@hoge.com<br>
+パスワード：seller1234<br>
+※確認後ログアウトお願いいたします。<br><br>
+
 
 # DB設計
 
@@ -58,8 +71,8 @@ CVC　　　123　
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|null: false,foreign_key: true|
-|card_id|integer|null: false|
-|customer_id|integer|null: false|
+|card_id|string|null: false|
+|customer_id|string|null: false|
 ### Association
 - belongs_to :user
 
@@ -71,16 +84,14 @@ CVC　　　123　
 |name|string|null: false|
 |description|text|null: false| #description:商品説明
 |status|integer|null: false| #status:商品状態
-|postage|string|null: false|  #postage:配送料の負担
-|delivery_way|string|null: false| #delivery_way:配送方法
-|delivery_area|string|null: false| #delivery_area:発送元地域
-|delivery_day|string|null :false| #delivery_day:発送までの目安
+|postage|integer|null: false|  #postage:配送料の負担
+|delivery_way|integer|null: false| #delivery_way:配送方法
+|delivery_area|integer|null: false| #delivery_area:発送元地域
+|delivery_day|integer|null :false| #delivery_day:発送までの目安
 |price|integer|null: false|
-|category_id|references|null: false,foreign_key: true|
-|size|text||
-|brand|text||
-|buyer_id|integer|class_name: "User"|
-|seller_id|integer|class_name: "User"|
+|category|integer|null: false,foreign_key: true|
+|size|integer||
+|buyer_id|integer||
 ### Associatioin
 - belongs_to :user
 - has_many :item_comments, dependent: :destroy
@@ -88,7 +99,6 @@ CVC　　　123　
 - belongs_to :category
 - belongs_to :brand
 - belongs_to :buyer, class_name: 'User', foreign_key: 'buyer_id'
-- belongs_to :seller, class_name: 'User', foreign_key: 'seller_id'
 - accepts_nested_attributes_for :images, allow_destroy: true
 
 
@@ -99,45 +109,3 @@ CVC　　　123　
 |item|references|null: false,foreign_key: true|
 ### Associatioin
 - belongs_to :item
-
-
-
-## item_commentsテーブル (商品に対するコメント)
-|Column|Type|Options|
-|------|----|-------|
-|text|text|null: false|
-|user_id|references|null: false,foreign_key: true|
-|item_id|references|null: false,foreign_key: true|
-### Associatioin
-- belongs_to :user
-- belongs_to :item_id
-
-
-
-## categoriesテーブル
-|Column|Type|Options|
-|------|----|-------|
-|genre|string|null: false, unique: true|
-### Associatioin
-- has_many :items
-- has_many :brands, through:brand_categories
-
-
-
-## brand_categoriesテーブル
-|Column|Type|Options|
-|------|----|-------|
-|brand_id|integer|null: false, foreign_key: true|
-|category_id|integer|null: false, foreign_key: true|
-### Associatioin
-- belongs_to :categories
-- belongs_to :brands
-
-
-## brandsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|genre|string|null: false|
-### Associatioin
-- has_many :categories, through:brand_categories
-
